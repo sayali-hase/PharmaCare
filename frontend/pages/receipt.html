@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Payment Receipt - PharmaCare</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/receipt.css">
+</head>
+
+<body>
+
+<main>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="top-header">
+
+        <div class="logo-area">
+
+            <div class="logo-icon">
+                P
+            </div>
+
+            <div class="logo-text">
+                <h2>PharmaCare</h2>
+                <p>Your Trusted Online Pharmacy</p>
+            </div>
+
+        </div>
+
+
+        <div class="header-search">
+
+            <input
+                type="text"
+                id="receiptSearch"
+                placeholder="Search medicines..."
+            >
+
+            <button type="button" onclick="searchFromReceipt()">
+                Search
+            </button>
+
+        </div>
+
+
+        <div class="header-actions">
+
+            <a href="track-order.html" class="action-icon">
+
+                <span>🚚</span>
+
+                <small>Track Order</small>
+
+            </a>
+
+
+           <a href="../index.html#offers" class="action-icon">
+
+    <span>🏷️</span>
+
+    <small>Offers</small>
+
+</a>
+
+
+            <a href="cart.html" class="action-icon cart-icon">
+
+                <span>🛒</span>
+
+                <b id="cartCount">0</b>
+
+                <small>Cart</small>
+
+            </a>
+
+
+            <a href="profile.html" class="action-icon">
+
+                <span>👤</span>
+
+                <small>Profile</small>
+
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <nav class="main-nav">
+
+        <a href="../index.html">Home</a>
+
+        <a href="medicines.html">Medicines</a>
+
+        <a href="medicines.html">Categories</a>
+
+        <a href="medicines.html">Offers</a>
+
+        <a href="../index.html#health-tips">Health Tips</a>
+
+        <a href="../index.html#about">About Us</a>
+
+    </nav>
+
+
+    <!-- ================= RECEIPT ================= -->
+
+    <section class="receipt-page">
+
+        <div class="receipt-card">
+
+
+            <!-- SUCCESS -->
+
+            <div class="receipt-success">
+
+                <div class="success-icon">
+                    ✓
+                </div>
+
+                <h1>Payment Successful</h1>
+
+                <p>
+                    Your order has been placed successfully.
+                </p>
+
+            </div>
+
+
+            <!-- RECEIPT HEADER -->
+
+            <div class="receipt-header">
+
+                <div>
+
+                    <h2>PharmaCare</h2>
+
+                    <p>
+                        Your Trusted Online Pharmacy
+                    </p>
+
+                </div>
+
+
+                <div class="receipt-title">
+
+                    <strong>PAYMENT RECEIPT</strong>
+
+                    <span id="receiptDate">
+                        -
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- ORDER INFORMATION -->
+
+            <div class="receipt-section">
+
+                <h3>Order Information</h3>
+
+                <div class="info-grid">
+
+                    <div class="info-item">
+
+                        <span>Order ID</span>
+
+                        <strong id="receiptOrderId">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <span>Payment Status</span>
+
+                        <strong class="paid-text">
+                            Paid
+                        </strong>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <span>Payment Method</span>
+
+                        <strong id="receiptPayment">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <span>UPI ID</span>
+
+                        <strong id="receiptUpi">
+                            -
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CUSTOMER INFORMATION -->
+
+            <div class="receipt-section">
+
+                <h3>Customer Information</h3>
+
+                <div class="customer-info">
+
+                    <p>
+                        <strong>Name:</strong>
+                        <span id="receiptCustomerName">-</span>
+                    </p>
+
+                    <p>
+                        <strong>Mobile:</strong>
+                        <span id="receiptMobile">-</span>
+                    </p>
+
+                    <p>
+                        <strong>Address:</strong>
+                        <span id="receiptAddress">-</span>
+                    </p>
+
+                    <p>
+                        <strong>City:</strong>
+                        <span id="receiptCity">-</span>
+                    </p>
+
+                    <p>
+                        <strong>Pincode:</strong>
+                        <span id="receiptPincode">-</span>
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- MEDICINES -->
+
+            <div class="receipt-section">
+
+                <h3>Medicine Details</h3>
+
+                <div class="receipt-table-wrapper">
+
+                    <table class="receipt-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Medicine</th>
+
+                                <th>Qty</th>
+
+                                <th>Price</th>
+
+                                <th>Total</th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="receiptItems">
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+
+            <!-- TOTAL -->
+
+            <div class="receipt-total-section">
+
+                <div class="total-line">
+
+                    <span>Subtotal</span>
+
+                    <strong id="receiptSubtotal">
+                        ₹0
+                    </strong>
+
+                </div>
+
+
+                <div class="total-line discount-line">
+
+                    <span>Discount</span>
+
+                    <strong id="receiptDiscount">
+                        -₹0
+                    </strong>
+
+                </div>
+
+
+                <div class="total-line">
+
+                    <span>Delivery</span>
+
+                    <strong id="receiptDelivery">
+                        Free
+                    </strong>
+
+                </div>
+
+
+                <div class="grand-total-line">
+
+                    <span>Total Paid</span>
+
+                    <strong id="receiptGrandTotal">
+                        ₹0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- FOOTER MESSAGE -->
+
+            <div class="receipt-message">
+
+                <strong>Thank you for shopping with PharmaCare.</strong>
+
+                <p>
+                    Your health is our priority.
+                </p>
+
+            </div>
+
+
+            <!-- BUTTONS -->
+
+            <div class="receipt-actions">
+
+                <button
+                    type="button"
+                    class="receipt-btn print-btn"
+                    onclick="printReceipt()"
+                >
+                    Print Receipt
+                </button>
+
+
+                <button
+                    type="button"
+                    class="receipt-btn home-btn"
+                    onclick="goToHome()"
+                >
+                    Continue Shopping
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="site-footer">
+
+    <div class="footer-main">
+
+        <div class="footer-block">
+
+            <div class="footer-icon">🎧</div>
+
+            <div>
+
+                <h3>Need Help?</h3>
+
+                <p>We are here to help you</p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-block">
+
+            <div class="footer-icon">📞</div>
+
+            <div>
+
+                <h3>Customer Care</h3>
+
+                <p>+91 98765 43210</p>
+
+                <p>Mon - Sat: 9:00 AM to 7:00 PM</p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-block">
+
+            <div class="footer-icon">✉</div>
+
+            <div>
+
+                <h3>Email Us</h3>
+
+                <p>support@pharmacare.com</p>
+
+                <p>We reply within 24 hours</p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-block">
+
+            <div class="footer-icon">📍</div>
+
+            <div>
+
+                <h3>Address</h3>
+
+                <p>
+                    At. Post Sangamner, Dist. Ahmednagar,
+                    Maharashtra - 422605
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-block footer-follow">
+
+            <h3>Follow Us</h3>
+
+            <p>Connect with us</p>
+
+            <div class="social-icons">
+
+                <span>f</span>
+
+                <span>◎</span>
+
+                <span>☎</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2025 PharmaCare. All Rights Reserved.
+        </p>
+
+        <div class="footer-bottom-links">
+
+            <a href="#">Privacy Policy</a>
+
+            <a href="#">Terms &amp; Conditions</a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="../js/main.js"></script>
+<script src="../js/receipt.js"></script>
+
+</body>
+
+</html>

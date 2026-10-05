@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Offers - PharmaCare</title>
+
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/medicines.css">
+
+    <!-- Offers CSS -->
+    <link rel="stylesheet" href="../css/offers.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="top-header">
+
+    <div class="logo-area">
+        <div class="logo-icon">+</div>
+        <div class="logo-text">PharmaCare</div>
+    </div>
+
+    <div class="header-search">
+        <input
+            type="text"
+            id="offerSearch"
+            placeholder="Search medicines..."
+        >
+        <button type="button" onclick="searchOffers()">🔍</button>
+    </div>
+
+    <div class="header-actions">
+
+        <a href="track-order.html" class="action-icon">
+            <span>🚚</span>
+            <small>Track Order</small>
+        </a>
+
+        <a href="offers.html" class="action-icon">
+            <span>🏷️</span>
+            <small>Offers</small>
+        </a>
+
+        <a href="cart.html" class="action-icon cart-icon">
+            <span>🛒</span>
+            <small>Cart</small>
+            <b id="cartCount">0</b>
+        </a>
+
+        <a href="profile.html" class="action-icon">
+            <span>👤</span>
+            <small>Profile</small>
+        </a>
+
+    </div>
+
+</header>
+
+
+<!-- ================= NAVIGATION ================= -->
+
+<nav class="main-nav">
+
+    <a href="../index.html">Home</a>
+
+    <a href="medicines.html">Medicines</a>
+
+    <a href="medicines.html#categories">Categories</a>
+
+    <a href="offers.html" class="active">Offers</a>
+
+    <a href="../index.html#health-tips">Health Tips</a>
+
+    <a href="../index.html#about">About Us</a>
+
+</nav>
+
+
+<!-- ================= MAIN CONTENT ================= -->
+
+<main class="offers-page">
+
+    <!-- Heading -->
+
+    <section class="offers-heading">
+
+        <div class="section-label">
+            SPECIAL OFFERS
+        </div>
+
+        <h1>Best Offers on Medicines</h1>
+
+        <p>
+            Save more on your everyday healthcare needs with our
+            special discounts and offers.
+        </p>
+
+    </section>
+
+
+    <!-- Offer Banner -->
+
+    <section class="offer-banner">
+
+        <div class="offer-banner-content">
+
+            <h2>Special Discounts</h2>
+
+            <p>
+                Get up to <strong>20% OFF</strong> on selected medicines.
+            </p>
+
+            <span>
+                Limited time offers • Shop now and save more
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PRODUCT SECTION ================= -->
+
+    <section class="offers-products">
+
+        <div class="offers-section-title">
+
+            <h2>Today's Best Deals</h2>
+
+            <p>
+                Explore our discounted medicines and healthcare products.
+            </p>
+
+        </div>
+
+
+        <div class="medicine-grid offers-grid" id="offersGrid">
+
+
+            <!-- ================= PRODUCT 1 ================= -->
+
+            <div
+                class="medicine-card offer-product"
+                data-name="Paracetamol 500mg"
+                onclick="openProduct('med001')"
+            >
+
+                <div class="discount-badge">
+                    10% OFF
+                </div>
+
+                <div class="medicine-image">
+
+                    <div class="medicine-visual tablet-visual">
+
+                        <div class="tablet-strip">
+
+                            <div class="tablet-pill"></div>
+                            <div class="tablet-pill"></div>
+                            <div class="tablet-pill"></div>
+                            <div class="tablet-pill"></div>
+                            <div class="tablet-pill"></div>
+                            <div class="tablet-pill"></div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="medicine-info">
+
+                    <span class="medicine-category">
+                        Pain Relief
+                    </span>
+
+                    <h3>Paracetamol 500mg</h3>
+
+                    <p class="medicine-description">
+                        Used for temporary relief from fever and mild pain.
+                    </p>
+
+                    <div class="rating">
+                        ⭐ 4.5
+                        <span>(120)</span>
+                    </div>
+
+                    <div class="price-row">
+
+                        <strong>₹22.50</strong>
+
+                        <del>₹25</del>
+
+                    </div>
+
+                    <div class="medicine-actions">
+
+                        <button
+                            class="add-cart-btn"
+                            onclick="event.stopPropagation(); addToCart('med001')"
+                        >
+                            Add to Cart
+                        </button>
+
+                        <button
+                            class="buy-btn"
+                            onclick="event.stopPropagation(); buyNow('med001')"
+                        >
+                            Buy Now
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= PRODUCT 2 ================= -->
+
+            <div
+                class="medicine-card offer-product"
+                data-name="Vitamin C Tablets"
+                onclick="openProduct('med002')"
+            >
+
+                <div class="discount-badge">
+                    15% OFF
+                </div>
+
+                <div class="medicine-image">
+
+                    <div class="medicine-visual bottle-visual">
+
+                        <div class="bottle-cap"></div>
+
+                        <div class="medicine-bottle">
+
+                            <div class="bottle-label">
+                                VIT C
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="medicine-info">
+
+                    <span class="medicine-category">
+                        Vitamins
+                    </span>
+
+                    <h3>Vitamin C Tablets</h3>
+
+                    <p class="medicine-description">
+                        Vitamin supplement for daily nutritional support.
+                    </p>
+
+                    <div class="rating">
+                        ⭐ 4.6
+                        <span>(98)</span>
+                    </div>
+
+                    <div class="price-row">
+
+                        <strong>₹102</strong>
+
+                        <del>₹120</del>
+
+                    </div>
+
+                    <div class="medicine-actions">
+
+                        <button
+                            class="add-cart-btn"
+                            onclick="event.stopPropagation(); addToCart('med002')"
+                        >
+                            Add to Cart
+                        </button>
+
+                        <button
+                            class="buy-btn"
+                            onclick="event.stopPropagation(); buyNow('med002')"
+                        >
+                            Buy Now
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= PRODUCT 3 ================= -->
+
+            <div
+                class="medicine-card offer-product"
+                data-name="Cetirizine 10mg"
+                onclick="openProduct('med003')"
+            >
+
+                <div class="discount-badge">
+                    5% OFF
+                </div>
+
+                <div class="medicine-image">
+
+                    <div class="medicine-visual tablet-visual blue-tablets">
+
+                        <div class="tablet-strip">
+
+                            <div class="tablet-pill"></div>
+                            <div class="tablet-pill"></div>
+                            <div class="tablet-pill"></div>
+                            <div class="tablet-pill"></div>
+                            <div class="tablet-pill"></div>
+                            <div class="tablet-pill"></div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="medicine-info">
+
+                    <span class="medicine-category">
+                        Cold & Flu
+                    </span>
+
+                    <h3>Cetirizine 10mg</h3>
+
+                    <p class="medicine-description">
+                        Commonly used for allergy-related symptoms.
+                    </p>
+
+                    <div class="rating">
+                        ⭐ 4.4
+                        <span>(86)</span>
+                    </div>
+
+                    <div class="price-row">
+
+                        <strong>₹42.75</strong>
+
+                        <del>₹45</del>
+
+                    </div>
+
+                    <div class="medicine-actions">
+
+                        <button
+                            class="add-cart-btn"
+                            onclick="event.stopPropagation(); addToCart('med003')"
+                        >
+                            Add to Cart
+                        </button>
+
+                        <button
+                            class="buy-btn"
+                            onclick="event.stopPropagation(); buyNow('med003')"
+                        >
+                            Buy Now
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= PRODUCT 4 ================= -->
+
+            <div
+                class="medicine-card offer-product"
+                data-name="Antiseptic Cream"
+                onclick="openProduct('med004')"
+            >
+
+                <div class="discount-badge">
+                    12% OFF
+                </div>
+
+                <div class="medicine-image">
+
+                    <div class="medicine-visual cream-visual">
+
+                        <div class="cream-tube">
+
+                            <div class="cream-label">
+                                CARE
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="medicine-info">
+
+                    <span class="medicine-category">
+                        Skin Care
+                    </span>
+
+                    <h3>Antiseptic Cream</h3>
+
+                    <p class="medicine-description">
+                        Cream for basic skin protection and care.
+                    </p>
+
+                    <div class="rating">
+                        ⭐ 4.3
+                        <span>(74)</span>
+                    </div>
+
+                    <div class="price-row">
+
+                        <strong>₹74.80</strong>
+
+                        <del>₹85</del>
+
+                    </div>
+
+                    <div class="medicine-actions">
+
+                        <button
+                            class="add-cart-btn"
+                            onclick="event.stopPropagation(); addToCart('med004')"
+                        >
+                            Add to Cart
+                        </button>
+
+                        <button
+                            class="buy-btn"
+                            onclick="event.stopPropagation(); buyNow('med004')"
+                        >
+                            Buy Now
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= PRODUCT 5 ================= -->
+
+            <div
+                class="medicine-card offer-product"
+                data-name="Digestive Tablets"
+                onclick="openProduct('med005')"
+            >
+
+                <div class="discount-badge">
+                    8% OFF
+                </div>
+
+                <div class="medicine-image">
+
+                    <div class="medicine-visual bottle-visual orange-bottle">
+
+                        <div class="bottle-cap"></div>
+
+                        <div class="medicine-bottle">
+
+                            <div class="bottle-label">
+                                DIGEST
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="medicine-info">
+
+                    <span class="medicine-category">
+                        Digestive
+                    </span>
+
+                    <h3>Digestive Tablets</h3>
+
+                    <p class="medicine-description">
+                        Digestive support tablets for everyday use.
+                    </p>
+
+                    <div class="rating">
+                        ⭐ 4.2
+                        <span>(61)</span>
+                    </div>
+
+                    <div class="price-row">
+
+                        <strong>₹59.80</strong>
+
+                        <del>₹65</del>
+
+                    </div>
+
+                    <div class="medicine-actions">
+
+                        <button
+                            class="add-cart-btn"
+                            onclick="event.stopPropagation(); addToCart('med005')"
+                        >
+                            Add to Cart
+                        </button>
+
+                        <button
+                            class="buy-btn"
+                            onclick="event.stopPropagation(); buyNow('med005')"
+                        >
+                            Buy Now
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= PRODUCT 6 ================= -->
+
+            <div
+                class="medicine-card offer-product"
+                data-name="Ibuprofen 400mg"
+                onclick="openProduct('med006')"
+            >
+
+                <div class="discount-badge">
+                    10% OFF
+                </div>
+
+                <div class="medicine-image">
+
+                    <div class="medicine-visual tablet-visual">
+
+                        <div class="tablet-strip">
+
+                            <div class="tablet-pill"></div>
+                            <div class="tablet-pill"></div>
+                            <div class="tablet-pill"></div>
+                            <div class="tablet-pill"></div>
+                            <div class="tablet-pill"></div>
+                            <div class="tablet-pill"></div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="medicine-info">
+
+                    <span class="medicine-category">
+                        Pain Relief
+                    </span>
+
+                    <h3>Ibuprofen 400mg</h3>
+
+                    <p class="medicine-description">
+                        Used for temporary relief from pain and inflammation.
+                    </p>
+
+                    <div class="rating">
+                        ⭐ 4.4
+                        <span>(68)</span>
+                    </div>
+
+                    <div class="price-row">
+
+                        <strong>₹49.50</strong>
+
+                        <del>₹55</del>
+
+                    </div>
+
+                    <div class="medicine-actions">
+
+                        <button
+                            class="add-cart-btn"
+                            onclick="event.stopPropagation(); addToCart('med006')"
+                        >
+                            Add to Cart
+                        </button>
+
+                        <button
+                            class="buy-btn"
+                            onclick="event.stopPropagation(); buyNow('med006')"
+                        >
+                            Buy Now
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= PRODUCT 7 ================= -->
+
+            <div
+                class="medicine-card offer-product"
+                data-name="Cough Syrup"
+                onclick="openProduct('med007')"
+            >
+
+                <div class="discount-badge">
+                    15% OFF
+                </div>
+
+                <div class="medicine-image">
+
+                    <div class="medicine-visual syrup-visual">
+
+                        <div class="syrup-cap"></div>
+
+                        <div class="syrup-bottle">
+
+                            <div class="syrup-label">
+                                COUGH
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="medicine-info">
+
+                    <span class="medicine-category">
+                        Cold & Flu
+                    </span>
+
+                    <h3>Cough Syrup</h3>
+
+                    <p class="medicine-description">
+                        Syrup for cough and throat discomfort.
+                    </p>
+
+                    <div class="rating">
+                        ⭐ 4.3
+                        <span>(57)</span>
+                    </div>
+
+                    <div class="price-row">
+
+                        <strong>₹80.75</strong>
+
+                        <del>₹95</del>
+
+                    </div>
+
+                    <div class="medicine-actions">
+
+                        <button
+                            class="add-cart-btn"
+                            onclick="event.stopPropagation(); addToCart('med007')"
+                        >
+                            Add to Cart
+                        </button>
+
+                        <button
+                            class="buy-btn"
+                            onclick="event.stopPropagation(); buyNow('med007')"
+                        >
+                            Buy Now
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= PRODUCT 8 ================= -->
+
+            <div
+                class="medicine-card offer-product"
+                data-name="Multivitamin Tablets"
+                onclick="openProduct('med008')"
+            >
+
+                <div class="discount-badge">
+                    20% OFF
+                </div>
+
+                <div class="medicine-image">
+
+                    <div class="medicine-visual bottle-visual">
+
+                        <div class="bottle-cap"></div>
+
+                        <div class="medicine-bottle">
+
+                            <div class="bottle-label">
+                                MULTI
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="medicine-info">
+
+                    <span class="medicine-category">
+                        Vitamins
+                    </span>
+
+                    <h3>Multivitamin Tablets</h3>
+
+                    <p class="medicine-description">
+                        Daily multivitamin supplement for nutritional support.
+                    </p>
+
+                    <div class="rating">
+                        ⭐ 4.7
+                        <span>(103)</span>
+                    </div>
+
+                    <div class="price-row">
+
+                        <strong>₹144</strong>
+
+                        <del>₹180</del>
+
+                    </div>
+
+                    <div class="medicine-actions">
+
+                        <button
+                            class="add-cart-btn"
+                            onclick="event.stopPropagation(); addToCart('med008')"
+                        >
+                            Add to Cart
+                        </button>
+
+                        <button
+                            class="buy-btn"
+                            onclick="event.stopPropagation(); buyNow('med008')"
+                        >
+                            Buy Now
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="site-footer">
+
+    <div class="footer-main">
+
+        <div class="footer-block">
+
+            <div class="footer-icon">🎧</div>
+
+            <div>
+                <h3>Need Help</h3>
+                <p>We're here to help you</p>
+            </div>
+
+        </div>
+
+
+        <div class="footer-block">
+
+            <div class="footer-icon">📞</div>
+
+            <div>
+                <h3>Customer Care</h3>
+                <p>1800-123-4567</p>
+            </div>
+
+        </div>
+
+
+        <div class="footer-block">
+
+            <div class="footer-icon">✉</div>
+
+            <div>
+                <h3>Email Us</h3>
+                <p>support@pharmacare.com</p>
+            </div>
+
+        </div>
+
+
+        <div class="footer-block">
+
+            <div class="footer-icon">📍</div>
+
+            <div>
+                <h3>Address</h3>
+                <p>PharmaCare, Maharashtra, India</p>
+            </div>
+
+        </div>
+
+
+        <div class="footer-block footer-follow">
+
+            <div>
+
+                <h3>Follow Us</h3>
+
+                <div class="social-icons">
+
+                    <span>f</span>
+                    <span>𝕏</span>
+                    <span>◎</span>
+                    <span>▶</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2025 PharmaCare. All rights reserved.
+        </p>
+
+        <div class="footer-bottom-links">
+
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script src="../js/offers.js"></script>
+
+</body>
+</html>

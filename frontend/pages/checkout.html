@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Checkout - PharmaCare</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/checkout.css">
+</head>
+
+<body>
+
+<main>
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header>
+
+        <div class="top-header">
+
+            <!-- LOGO -->
+            <a href="../index.html" class="logo-area">
+
+                <div class="logo-icon">+</div>
+
+                <div class="logo-text">
+                    <h2>PharmaCare</h2>
+                    <p>Your Trusted Online Pharmacy</p>
+                </div>
+
+            </a>
+
+
+            <!-- SEARCH -->
+            <div class="header-search">
+
+                <input
+                    type="text"
+                    id="checkoutSearch"
+                    placeholder="Search medicines, health products..."
+                >
+
+                <button onclick="searchFromCheckout()">
+                    Search
+                </button>
+
+            </div>
+
+
+            <!-- HEADER ACTIONS -->
+            <div class="header-actions">
+
+                <a href="track-order.html" class="action-icon">
+                    <span>📦</span>
+                    <small>Track Order</small>
+                </a>
+
+                <a href="../index.html#offers" class="action-icon">
+                    <span>🏷️</span>
+                    <small>Offers</small>
+                </a>
+
+                <a href="cart.html" class="action-icon cart-icon">
+                    <span>🛒</span>
+                    <b id="cartCount">0</b>
+                    <small>Cart</small>
+                </a>
+
+                <a href="login.html" class="action-icon" id="accountLink">
+                    <span>👤</span>
+                    <small id="accountLabel">Login / Signup</small>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             MAIN NAVIGATION
+        ================================================== -->
+
+        <nav class="main-nav">
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <a href="medicines.html">
+                Medicines
+            </a>
+
+            <a href="medicines.html">
+                Categories
+            </a>
+
+            <a href="../index.html#offers">
+                Offers
+            </a>
+
+            <a href="../index.html#health-tips">
+                Health Tips
+            </a>
+
+            <a href="../index.html#about">
+                About Us
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =====================================================
+         CHECKOUT PAGE
+    ====================================================== -->
+
+    <section class="checkout-page">
+
+        <!-- PAGE TITLE -->
+
+        <div class="checkout-title">
+
+            <h1>Checkout</h1>
+
+            <p>
+                Complete your order and get your medicines delivered
+            </p>
+
+        </div>
+
+
+        <!-- =================================================
+             CHECKOUT CONTAINER
+        ================================================== -->
+
+        <div class="checkout-container">
+
+
+            <!-- =================================================
+                 LEFT SIDE
+            ================================================== -->
+
+            <div class="checkout-left">
+
+
+                <!-- =================================================
+                     DELIVERY INFORMATION
+                ================================================== -->
+
+                <section class="checkout-card">
+
+                    <h2>
+                        Delivery Information
+                    </h2>
+
+
+                    <!-- NAME -->
+
+                    <div class="form-group">
+
+                        <label for="customerName">
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="customerName"
+                            placeholder="Enter your full name"
+                        >
+
+                    </div>
+
+
+                    <!-- MOBILE + PINCODE -->
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="customerMobile">
+                                Mobile Number
+                            </label>
+
+                            <input
+                                type="text"
+                                id="customerMobile"
+                                maxlength="10"
+                                placeholder="Enter 10-digit mobile number"
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="customerPincode">
+                                Pincode
+                            </label>
+
+                            <input
+                                type="text"
+                                id="customerPincode"
+                                maxlength="6"
+                                placeholder="Enter pincode"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ADDRESS -->
+
+                    <div class="form-group">
+
+                        <label for="customerAddress">
+                            Delivery Address
+                        </label>
+
+                        <textarea
+                            id="customerAddress"
+                            placeholder="Enter complete delivery address"
+                        ></textarea>
+
+                    </div>
+
+
+                    <!-- CITY -->
+
+                    <div class="form-group">
+
+                        <label for="customerCity">
+                            City
+                        </label>
+
+                        <input
+                            type="text"
+                            id="customerCity"
+                            placeholder="Enter your city"
+                        >
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================================
+                     PAYMENT METHOD
+                ================================================== -->
+
+                <section class="checkout-card">
+
+                    <h2>
+                        Payment Method
+                    </h2>
+
+
+                    <div class="payment-methods">
+
+
+                        <!-- CASH ON DELIVERY -->
+
+                        <div class="payment-option">
+
+                            <input
+                                type="radio"
+                                id="cod"
+                                name="payment"
+                                value="Cash on Delivery"
+                                onchange="showPayment('cod')"
+                            >
+
+                            <label for="cod">
+
+                                <span class="payment-icon">
+                                    💵
+                                </span>
+
+                                <span>
+                                    Cash on Delivery
+                                </span>
+
+                            </label>
+
+                        </div>
+
+
+                        <!-- UPI -->
+
+                        <div class="payment-option">
+
+                            <input
+                                type="radio"
+                                id="upi"
+                                name="payment"
+                                value="UPI"
+                                onchange="showPayment('upi')"
+                            >
+
+                            <label for="upi">
+
+                                <span class="payment-icon">
+                                    📱
+                                </span>
+
+                                <span>
+                                    UPI
+                                </span>
+
+                            </label>
+
+                        </div>
+
+
+                        <!-- CARD -->
+
+                        <div class="payment-option">
+
+                            <input
+                                type="radio"
+                                id="card"
+                                name="payment"
+                                value="Card"
+                                onchange="showPayment('card')"
+                            >
+
+                            <label for="card">
+
+                                <span class="payment-icon">
+                                    💳
+                                </span>
+
+                                <span>
+                                    Credit / Debit Card
+                                </span>
+
+                            </label>
+
+                        </div>
+
+
+                        <!-- NET BANKING -->
+
+                        <div class="payment-option">
+
+                            <input
+                                type="radio"
+                                id="netbanking"
+                                name="payment"
+                                value="Net Banking"
+                                onchange="showPayment('netbanking')"
+                            >
+
+                            <label for="netbanking">
+
+                                <span class="payment-icon">
+                                    🏦
+                                </span>
+
+                                <span>
+                                    Net Banking
+                                </span>
+
+                            </label>
+
+                        </div>
+
+
+                        <!-- WALLET -->
+
+                        <div class="payment-option">
+
+                            <input
+                                type="radio"
+                                id="wallet"
+                                name="payment"
+                                value="Wallet"
+                                onchange="showPayment('wallet')"
+                            >
+
+                            <label for="wallet">
+
+                                <span class="payment-icon">
+                                    👛
+                                </span>
+
+                                <span>
+                                    Wallet
+                                </span>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         UPI DETAILS
+                    ================================================== -->
+
+                    <div id="upiDetails" class="payment-details">
+
+                        <h3>
+                            UPI Payment
+                        </h3>
+
+                        <div class="form-group">
+
+                            <label for="upiId">
+                                UPI ID
+                            </label>
+
+                            <input
+                                type="text"
+                                id="upiId"
+                                placeholder="example@upi"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         CARD DETAILS
+                    ================================================== -->
+
+                    <div id="cardDetails" class="payment-details">
+
+                        <h3>
+                            Card Details
+                        </h3>
+
+
+                        <div class="form-group">
+
+                            <label for="cardNumber">
+                                Card Number
+                            </label>
+
+                            <input
+                                type="text"
+                                id="cardNumber"
+                                maxlength="16"
+                                placeholder="Enter card number"
+                            >
+
+                        </div>
+
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+
+                                <label for="cardExpiry">
+                                    Expiry
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="cardExpiry"
+                                    placeholder="MM/YY"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="cardCVV">
+                                    CVV
+                                </label>
+
+                                <input
+                                    type="password"
+                                    id="cardCVV"
+                                    maxlength="3"
+                                    placeholder="CVV"
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="cardName">
+                                Name on Card
+                            </label>
+
+                            <input
+                                type="text"
+                                id="cardName"
+                                placeholder="Enter card holder name"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         NET BANKING DETAILS
+                    ================================================== -->
+
+                    <div id="netbankingDetails" class="payment-details">
+
+                        <h3>
+                            Net Banking
+                        </h3>
+
+                        <div class="form-group">
+
+                            <label for="bankName">
+                                Select Bank
+                            </label>
+
+                            <select id="bankName">
+
+                                <option value="">
+                                    Select your bank
+                                </option>
+
+                                <option value="SBI">
+                                    State Bank of India
+                                </option>
+
+                                <option value="HDFC">
+                                    HDFC Bank
+                                </option>
+
+                                <option value="ICICI">
+                                    ICICI Bank
+                                </option>
+
+                                <option value="Axis">
+                                    Axis Bank
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         WALLET DETAILS
+                    ================================================== -->
+
+                    <div id="walletDetails" class="payment-details">
+
+                        <h3>
+                            Wallet
+                        </h3>
+
+                        <div class="form-group">
+
+                            <label for="walletName">
+                                Select Wallet
+                            </label>
+
+                            <select id="walletName">
+
+                                <option value="">
+                                    Select wallet
+                                </option>
+
+                                <option value="Paytm">
+                                    Paytm
+                                </option>
+
+                                <option value="PhonePe">
+                                    PhonePe
+                                </option>
+
+                                <option value="Amazon Pay">
+                                    Amazon Pay
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 RIGHT SIDE - ORDER SUMMARY
+            ================================================== -->
+
+            <aside class="order-summary">
+
+                <h2>
+                    Order Summary
+                </h2>
+
+
+                <!-- CHECKOUT ITEMS -->
+
+                <div id="checkoutItems">
+                </div>
+
+
+                <!-- ITEMS -->
+
+                <div class="summary-line">
+
+                    <span>
+                        Items
+                    </span>
+
+                    <strong id="summaryItems">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <!-- SUBTOTAL -->
+
+                <div class="summary-line">
+
+                    <span>
+                        Subtotal
+                    </span>
+
+                    <strong id="subtotal">
+                        ₹0
+                    </strong>
+
+                </div>
+
+
+                <!-- DELIVERY -->
+
+                <div class="summary-line">
+
+                    <span>
+                        Delivery
+                    </span>
+
+                    <strong id="delivery">
+                        Free
+                    </strong>
+
+                </div>
+
+
+                <!-- DISCOUNT -->
+
+                <div class="summary-line discount">
+
+                    <span>
+                        Discount
+                    </span>
+
+                    <strong id="discount">
+                        -₹0
+                    </strong>
+
+                </div>
+
+
+                <!-- DIVIDER -->
+
+                <div class="summary-divider">
+                </div>
+
+
+                <!-- TOTAL -->
+
+                <div class="summary-total">
+
+                    <span>
+                        Total
+                    </span>
+
+                    <strong id="grandTotal">
+                        ₹0
+                    </strong>
+
+                </div>
+
+
+                <!-- PLACE ORDER -->
+
+                <button
+                    type="button"
+                    class="checkout-btn"
+                    onclick="placeOrder()"
+                >
+                    Place Order
+                </button>
+
+
+                <!-- SECURE NOTE -->
+
+                <div class="secure-text">
+                    🔒 Secure &amp; Safe Checkout
+                </div>
+
+            </aside>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         PAYMENT MODAL
+    ====================================================== -->
+
+    <div
+        id="paymentModal"
+        class="payment-modal"
+    >
+
+        <div class="payment-modal-content">
+
+            <button
+                type="button"
+                class="close-modal"
+                onclick="closePaymentModal()"
+            >
+                ×
+            </button>
+
+            <h2>
+                Complete Payment
+            </h2>
+
+            <div id="paymentModalBody">
+
+                <p>
+                    Please complete your payment.
+                </p>
+
+            </div>
+
+            <button
+                type="button"
+                class="checkout-btn"
+                onclick="completeOnlineOrder()"
+            >
+                Complete Payment
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         FOOTER
+         SAME AS CART PAGE
+    ====================================================== -->
+
+    <footer class="site-footer">
+
+        <div class="footer-main">
+
+
+            <!-- NEED HELP -->
+
+            <div class="footer-block">
+
+                <div class="footer-icon">
+                    🎧
+                </div>
+
+                <div>
+
+                    <h3>
+                        Need Help?
+                    </h3>
+
+                    <p>
+                        We are here to help you
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- CUSTOMER CARE -->
+
+            <div class="footer-block">
+
+                <div class="footer-icon">
+                    📞
+                </div>
+
+                <div>
+
+                    <h3>
+                        Customer Care
+                    </h3>
+
+                    <p>
+                        +91 98765 43210
+                    </p>
+
+                    <p>
+                        Mon - Sat: 9:00 AM to 7:00 PM
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- EMAIL -->
+
+            <div class="footer-block">
+
+                <div class="footer-icon">
+                    ✉
+                </div>
+
+                <div>
+
+                    <h3>
+                        Email Us
+                    </h3>
+
+                    <p>
+                        support@pharmacare.com
+                    </p>
+
+                    <p>
+                        We reply within 24 hours
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- ADDRESS -->
+
+            <div class="footer-block">
+
+                <div class="footer-icon">
+                    📍
+                </div>
+
+                <div>
+
+                    <h3>
+                        Address
+                    </h3>
+
+                    <p>
+                        At. Post Sangamner, Dist. Ahmednagar, Maharashtra - 422605
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- FOLLOW US -->
+
+            <div class="footer-block footer-follow">
+
+                <h3>
+                    Follow Us
+                </h3>
+
+                <p>
+                    Connect with us
+                </p>
+
+                <!-- CIRCULAR SOCIAL ICONS -->
+
+                <div class="social-icons">
+
+                    <span>f</span>
+
+                    <span>◎</span>
+
+                    <span>☎</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             FOOTER BOTTOM
+        ================================================== -->
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2025 PharmaCare. All Rights Reserved.
+            </p>
+
+            <div class="footer-bottom-links">
+
+                <a href="#">
+                    Privacy Policy
+                </a>
+
+                <a href="#">
+                    Terms &amp; Conditions
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</main>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+====================================================== -->
+
+<script src="../js/main.js"></script>
+<script src="../js/checkout.js"></script>
+
+</body>
+
+</html>

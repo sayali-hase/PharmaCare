@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cart - PharmaCare</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/cart.css">
+
+</head>
+
+<body>
+
+<main>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="top-header">
+
+            <a href="../index.html" class="logo-area">
+
+                <div class="logo-icon">
+                    +
+                </div>
+
+                <div class="logo-text">
+                    <h2>PharmaCare</h2>
+                    <p>Your Trusted Online Pharmacy</p>
+                </div>
+
+            </a>
+
+
+            <!-- SEARCH -->
+
+            <div class="header-search">
+
+                <input
+                    type="text"
+                    id="cartSearch"
+                    placeholder="Search medicines, health products..."
+                >
+
+                <button onclick="searchFromCart()">
+                    Search
+                </button>
+
+            </div>
+
+
+            <!-- HEADER ACTIONS -->
+
+            <div class="header-actions">
+
+                <a href="track-order.html" class="action-icon">
+                    <span>📦</span>
+                    <small>Track Order</small>
+                </a>
+
+                <a href="../index.html#offers" class="action-icon">
+                    <span>🏷️</span>
+                    <small>Offers</small>
+                </a>
+
+                <a href="cart.html" class="action-icon cart-icon">
+                    <span>🛒</span>
+                    <small>Cart</small>
+                    <b id="cartCount">0</b>
+                </a>
+
+                <a href="profile.html" class="action-icon">
+                    <span>👤</span>
+                    <small>Profile</small>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= NAVIGATION ================= -->
+
+        <nav class="main-nav">
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <a href="medicines.html">
+                Medicines
+            </a>
+
+            <a href="medicines.html">
+                Categories
+            </a>
+
+            <a href="../index.html#offers">
+                Offers
+            </a>
+
+            <a href="../index.html#health-tips">
+                Health Tips
+            </a>
+
+            <a href="../index.html#about">
+                About Us
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= CART PAGE ================= -->
+
+    <section class="cart-page">
+
+        <!-- PAGE HEADER -->
+
+        <div class="cart-page-header">
+
+            <div>
+
+                <h1>
+                    Your Cart
+                </h1>
+
+                <p>
+                    Review your selected medicines
+                </p>
+
+            </div>
+
+            <a
+                href="medicines.html"
+                class="continue-shopping"
+            >
+                ← Continue Shopping
+            </a>
+
+        </div>
+
+
+        <!-- CART LAYOUT -->
+
+        <div class="cart-layout">
+
+
+            <!-- CART ITEMS -->
+
+            <section class="cart-items-section">
+
+                <h2>
+                    Cart Items
+                </h2>
+
+                <div
+                    id="cartItems"
+                    class="cart-items"
+                >
+                </div>
+
+
+                <!-- EMPTY CART -->
+
+                <div
+                    id="emptyCart"
+                    class="empty-cart"
+                    style="display:none;"
+                >
+
+                    <div class="empty-cart-icon">
+                        🛒
+                    </div>
+
+                    <h2>
+                        Your cart is empty
+                    </h2>
+
+                    <p>
+                        Add some medicines to your cart.
+                    </p>
+
+                    <a
+                        href="medicines.html"
+                        class="shop-medicines-btn"
+                    >
+                        Shop Medicines
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <!-- ORDER SUMMARY -->
+
+            <aside class="cart-summary">
+
+                <h2>
+                    Order Summary
+                </h2>
+
+
+                <div class="summary-row">
+
+                    <span>
+                        Items
+                    </span>
+
+                    <strong id="summaryItems">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-row">
+
+                    <span>
+                        Subtotal
+                    </span>
+
+                    <strong id="subtotal">
+                        ₹0
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-row">
+
+                    <span>
+                        Delivery
+                    </span>
+
+                    <strong id="delivery">
+                        Free
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-row discount-row">
+
+                    <span>
+                        Discount
+                    </span>
+
+                    <strong id="discount">
+                        ₹0
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-divider"></div>
+
+
+                <div class="summary-total">
+
+                    <span>
+                        Total
+                    </span>
+
+                    <strong id="grandTotal">
+                        ₹0
+                    </strong>
+
+                </div>
+
+
+                <button
+                    class="checkout-btn"
+                    onclick="proceedToCheckout()"
+                >
+                    Proceed to Checkout
+                </button>
+
+
+                <div class="secure-note">
+                    🔒 Secure &amp; Safe Checkout
+                </div>
+
+            </aside>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="site-footer">
+
+        <div class="footer-main">
+
+            <div class="footer-block">
+
+                <div class="footer-icon">
+                    🎧
+                </div>
+
+                <div>
+                    <h3>Need Help?</h3>
+                    <p>We are here to help you</p>
+                </div>
+
+            </div>
+
+
+            <div class="footer-block">
+
+                <div class="footer-icon">
+                    📞
+                </div>
+
+                <div>
+                    <h3>Customer Care</h3>
+                    <p>+91 98765 43210</p>
+                    <p>Mon - Sat: 9:00 AM to 7:00 PM</p>
+                </div>
+
+            </div>
+
+
+            <div class="footer-block">
+
+                <div class="footer-icon">
+                    ✉
+                </div>
+
+                <div>
+                    <h3>Email Us</h3>
+                    <p>support@pharmacare.com</p>
+                    <p>We reply within 24 hours</p>
+                </div>
+
+            </div>
+
+
+            <div class="footer-block">
+
+                <div class="footer-icon">
+                    📍
+                </div>
+
+                <div>
+                    <h3>Address</h3>
+                    <p>
+                        At. Post Sangamner, Dist. Ahmednagar,
+                        Maharashtra - 422605
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="footer-block footer-follow">
+
+                <h3>Follow Us</h3>
+
+                <p>
+                    Connect with us
+                </p>
+
+                <div class="social-icons">
+
+                    <span>f</span>
+                    <span>◎</span>
+                    <span>☎</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2025 PharmaCare. All Rights Reserved.
+            </p>
+
+            <div class="footer-bottom-links">
+
+                <a href="#">
+                    Privacy Policy
+                </a>
+
+                <a href="#">
+                    Terms &amp; Conditions
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</main>
+
+
+<script src="../js/main.js"></script>
+<script src="../js/cart.js"></script>
+
+</body>
+</html>

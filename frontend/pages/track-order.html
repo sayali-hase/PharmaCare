@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Track Order - PharmaCare</title>
+
+    <!-- Common CSS -->
+    <link
+        rel="stylesheet"
+        href="../css/style.css">
+
+    <!-- Track Order CSS -->
+    <link
+        rel="stylesheet"
+        href="../css/track-order.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     TOP HEADER
+===================================================== -->
+
+<header class="top-header">
+
+
+    <!-- LOGO -->
+
+    <div class="logo-area">
+
+        <div class="logo-icon">
+            +
+        </div>
+
+        <div class="logo-text">
+
+            <h2>
+                PharmaCare
+            </h2>
+
+            <p>
+                Your Trusted Online Pharmacy
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- SEARCH -->
+
+    <div class="header-search">
+
+        <input
+            type="text"
+            id="trackSearch"
+            placeholder="Search medicines, health products...">
+
+        <button
+            type="button"
+            onclick="searchFromTrack()">
+
+            Search
+
+        </button>
+
+    </div>
+
+
+    <!-- HEADER ACTIONS -->
+
+    <div class="header-actions">
+
+
+        <!-- Track Order -->
+
+        <a
+            href="track-order.html"
+            class="action-icon">
+
+            <span>
+                🚚
+            </span>
+
+            <small>
+                Track Order
+            </small>
+
+        </a>
+
+
+        <!-- Offers -->
+
+        <a
+            href="../index.html#offers"
+            class="action-icon">
+
+            <span>
+                🏷️
+            </span>
+
+            <small>
+                Offers
+            </small>
+
+        </a>
+
+
+        <!-- Cart -->
+
+        <a
+            href="cart.html"
+            class="action-icon cart-icon">
+
+            <span>
+                🛒
+            </span>
+
+            <small>
+                Cart
+            </small>
+
+            <b id="cartCount">
+                0
+            </b>
+
+        </a>
+
+
+        <!-- Profile -->
+
+        <a
+            href="profile.html"
+            class="action-icon">
+
+            <span>
+                👤
+            </span>
+
+            <small>
+                Profile
+            </small>
+
+        </a>
+
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     MAIN NAVIGATION
+===================================================== -->
+
+<nav class="main-nav">
+
+    <a href="../index.html">
+        Home
+    </a>
+
+    <a href="medicines.html">
+        Medicines
+    </a>
+
+    <a href="../index.html#categories">
+        Categories
+    </a>
+
+    <a href="../index.html#offers">
+        Offers
+    </a>
+
+    <a href="../index.html#health-tips">
+        Health Tips
+    </a>
+
+    <a href="../index.html#about">
+        About Us
+    </a>
+
+</nav>
+
+
+
+<!-- =====================================================
+     PAGE HEADER
+===================================================== -->
+
+<section class="page-header">
+
+    <h1>
+        Track Your Order
+    </h1>
+
+    <p>
+        Enter your Order ID to check your order status.
+    </p>
+
+</section>
+
+
+
+<!-- =====================================================
+     BREADCRUMB
+===================================================== -->
+
+<div class="breadcrumb">
+
+    <a href="../index.html">
+        Home
+    </a>
+
+    <span>
+        /
+    </span>
+
+    <span>
+        Track Order
+    </span>
+
+</div>
+
+
+
+<!-- =====================================================
+     TRACK ORDER CONTENT
+===================================================== -->
+
+<main class="track-order-page">
+
+
+    <!-- SEARCH ORDER -->
+
+    <div class="track-search-box">
+
+        <input
+            type="text"
+            id="orderId"
+            placeholder="Enter your Order ID">
+
+        <button
+            type="button"
+            onclick="trackOrder()">
+
+            Track Order
+
+        </button>
+
+    </div>
+
+
+    <!-- TRACK RESULT MESSAGE -->
+
+    <div
+        id="trackResult"
+        class="track-result">
+
+    </div>
+
+
+    <!-- TRACK INFORMATION -->
+
+    <div
+        id="trackInfo"
+        style="display: none;">
+
+    </div>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="site-footer">
+
+
+    <div class="footer-main">
+
+
+        <!-- NEED HELP -->
+
+        <div class="footer-block">
+
+            <div class="footer-icon">
+                🎧
+            </div>
+
+            <div>
+
+                <h3>
+                    Need Help?
+                </h3>
+
+                <p>
+                    We are here to help you
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- CUSTOMER CARE -->
+
+        <div class="footer-block">
+
+            <div class="footer-icon">
+                📞
+            </div>
+
+            <div>
+
+                <h3>
+                    Customer Care
+                </h3>
+
+                <p>
+                    +91 98765 43210
+                </p>
+
+                <p>
+                    Mon - Sat: 9:00 AM to 7:00 PM
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- EMAIL -->
+
+        <div class="footer-block">
+
+            <div class="footer-icon">
+                ✉
+            </div>
+
+            <div>
+
+                <h3>
+                    Email Us
+                </h3>
+
+                <p>
+                    support@pharmacare.com
+                </p>
+
+                <p>
+                    We reply within 24 hours
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- ADDRESS -->
+
+        <div class="footer-block">
+
+            <div class="footer-icon">
+                📍
+            </div>
+
+            <div>
+
+                <h3>
+                    Address
+                </h3>
+
+                <p>
+                    At. Post Sangamner, Dist. Ahmednagar,
+                    Maharashtra - 422605
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOLLOW US -->
+
+        <div class="footer-block footer-follow">
+
+            <h3>
+                Follow Us
+            </h3>
+
+            <p>
+                Connect with us
+            </p>
+
+            <div class="social-icons">
+
+                <span>
+                    f
+                </span>
+
+                <span>
+                    ◎
+                </span>
+
+                <span>
+                    ☎
+                </span>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- FOOTER BOTTOM -->
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2025 PharmaCare. All Rights Reserved.
+        </p>
+
+        <div class="footer-bottom-links">
+
+            <a href="#">
+                Privacy Policy
+            </a>
+
+            <a href="#">
+                Terms &amp; Conditions
+            </a>
+
+        </div>
+
+    </div>
+
+
+</footer>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script src="../js/main.js"></script>
+
+<script src="../js/track-order.js"></script>
+
+
+</body>
+
+</html>

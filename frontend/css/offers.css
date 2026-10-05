@@ -1,0 +1,222 @@
+/* =====================================================
+   PHARMACARE OFFERS PAGE
+   Uses the same design as Medicines page
+   ===================================================== */
+
+.offers-page {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 28px 20px 40px;
+}
+
+
+/* ================= HEADING ================= */
+
+.offers-heading {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.section-label {
+    display: inline-block;
+    color: #0b8f55;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.offers-heading h1 {
+    margin: 0;
+    font-size: 32px;
+    color: #173b2d;
+}
+
+.offers-heading p {
+    margin: 8px auto 0;
+    max-width: 650px;
+    color: #666;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+
+/* ================= OFFER BANNER ================= */
+
+.offer-banner {
+    background: linear-gradient(
+        135deg,
+        #eaf8f0,
+        #f7fcf9
+    );
+
+    border: 1px solid #d3ebdd;
+    border-radius: 14px;
+
+    padding: 22px 25px;
+
+    margin-bottom: 35px;
+
+    text-align: center;
+}
+
+.offer-banner-content h2 {
+    margin: 0 0 7px;
+
+    color: #087b4b;
+    font-size: 24px;
+}
+
+.offer-banner-content p {
+    margin: 0 0 5px;
+
+    color: #333;
+    font-size: 16px;
+}
+
+.offer-banner-content strong {
+    color: #087b4b;
+}
+
+.offer-banner-content span {
+    color: #777;
+    font-size: 13px;
+}
+
+
+/* ================= SECTION TITLE ================= */
+
+.offers-section-title {
+    margin-bottom: 20px;
+}
+
+.offers-section-title h2 {
+    margin: 0 0 5px;
+
+    color: #173b2d;
+    font-size: 24px;
+}
+
+.offers-section-title p {
+    margin: 0;
+
+    color: #777;
+    font-size: 14px;
+}
+
+
+/* ================= PRODUCT GRID ================= */
+
+.offers-grid {
+    margin-top: 0;
+}
+
+
+/* ================= OFFER PRODUCT ================= */
+
+.offer-product {
+    position: relative;
+    cursor: pointer;
+}
+
+
+/* ================= DISCOUNT BADGE ================= */
+
+.discount-badge {
+    position: absolute;
+
+    top: 12px;
+    right: 12px;
+
+    z-index: 5;
+
+    background: #0b8f55;
+    color: #fff;
+
+    padding: 5px 9px;
+
+    border-radius: 5px;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+/* ================= PRICE ================= */
+
+.offer-product .price-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-top: 8px;
+}
+
+.offer-product .price-row strong {
+    color: #087b4b;
+    font-size: 18px;
+}
+
+.offer-product .price-row del {
+    color: #999;
+    font-size: 13px;
+}
+
+
+/* ================= HOVER ================= */
+
+.offer-product {
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.offer-product:hover {
+    transform: translateY(-3px);
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+    .offers-page {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .offers-heading h1 {
+        font-size: 28px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .offers-page {
+        padding-top: 20px;
+    }
+
+    .offers-heading h1 {
+        font-size: 25px;
+    }
+
+    .offers-heading p {
+        font-size: 13px;
+    }
+
+    .offer-banner {
+        padding: 18px 15px;
+    }
+
+    .offer-banner-content h2 {
+        font-size: 21px;
+    }
+
+    .offers-section-title h2 {
+        font-size: 21px;
+    }
+
+}

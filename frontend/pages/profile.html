@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Profile - PharmaCare</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="stylesheet" href="../css/profile.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="top-header">
+
+    <div class="logo-area">
+
+        <div class="logo-icon">
+            +
+        </div>
+
+        <div class="logo-text">
+
+            <h2>
+                PharmaCare
+            </h2>
+
+            <p>
+                Your Trusted Online Pharmacy
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- SEARCH -->
+
+    <div class="header-search">
+
+        <input
+            type="text"
+            id="profileSearch"
+            placeholder="Search medicines, health products..."
+        >
+
+        <button
+            type="button"
+            onclick="searchFromProfile()"
+        >
+            Search
+        </button>
+
+    </div>
+
+
+    <!-- HEADER ACTIONS -->
+
+    <div class="header-actions">
+
+        <a
+            href="track-order.html"
+            class="action-icon"
+        >
+            <span>🚚</span>
+            <small>Track Order</small>
+        </a>
+
+
+        <a
+            href="../index.html#offers"
+            class="action-icon"
+        >
+            <span>🏷️</span>
+            <small>Offers</small>
+        </a>
+
+
+        <a
+            href="cart.html"
+            class="action-icon cart-icon"
+        >
+            <span>🛒</span>
+            <small>Cart</small>
+            <b id="cartCount">0</b>
+        </a>
+
+
+        <a
+            href="profile.html"
+            class="action-icon"
+        >
+            <span>👤</span>
+            <small>Profile</small>
+        </a>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<nav class="main-nav">
+
+    <a href="../index.html">
+        Home
+    </a>
+
+    <a href="medicines.html">
+        Medicines
+    </a>
+
+    <a href="../index.html#categories">
+        Categories
+    </a>
+
+    <a href="../index.html#offers">
+        Offers
+    </a>
+
+    <a href="../index.html#health-tips">
+        Health Tips
+    </a>
+
+    <a href="../index.html#about">
+        About Us
+    </a>
+
+</nav>
+
+
+
+<!-- =====================================================
+     PROFILE PAGE
+===================================================== -->
+
+<main class="profile-page">
+
+
+    <!-- PAGE TITLE -->
+
+    <section class="page-header">
+
+        <div>
+
+            <h1>
+                My Profile
+            </h1>
+
+            <p>
+                Manage your PharmaCare account details
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- PROFILE CONTAINER -->
+
+    <section class="profile-container">
+
+
+        <!-- =================================================
+             USER INFORMATION
+        ================================================= -->
+
+        <div class="profile-card">
+
+
+            <!-- USER HEADER -->
+
+            <div class="profile-user">
+
+                <div class="profile-avatar">
+                    👤
+                </div>
+
+
+                <div>
+
+                    <h2>
+                        PharmaCare User
+                    </h2>
+
+                    <p id="profileEmail">
+                        sayalihase3@gmail.com
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PROFILE FORM -->
+
+            <form id="profileForm">
+
+
+                <div class="profile-form-grid">
+
+
+                    <!-- FULL NAME -->
+
+                    <div class="form-group">
+
+                        <label for="fullName">
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="fullName"
+                            placeholder="Enter your full name"
+                        >
+
+                    </div>
+
+
+
+                    <!-- MOBILE -->
+
+                    <div class="form-group">
+
+                        <label for="mobileNumber">
+                            Mobile Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="mobileNumber"
+                            placeholder="Enter mobile number"
+                        >
+
+                    </div>
+
+
+
+                    <!-- EMAIL -->
+
+                    <div class="form-group">
+
+                        <label for="emailAddress">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="emailAddress"
+                            value="sayalihase3@gmail.com"
+                            placeholder="Enter email address"
+                        >
+
+                    </div>
+
+
+
+                    <!-- ADDRESS -->
+
+                    <div class="form-group full-width">
+
+                        <label for="deliveryAddress">
+                            Delivery Address
+                        </label>
+
+                        <textarea
+                            id="deliveryAddress"
+                            rows="3"
+                            placeholder="Enter your delivery address"
+                        ></textarea>
+
+                    </div>
+
+
+
+                    <!-- CITY -->
+
+                    <div class="form-group">
+
+                        <label for="city">
+                            City
+                        </label>
+
+                        <input
+                            type="text"
+                            id="city"
+                            placeholder="Enter city"
+                        >
+
+                    </div>
+
+
+
+                    <!-- PIN CODE -->
+
+                    <div class="form-group">
+
+                        <label for="pinCode">
+                            PIN Code
+                        </label>
+
+                        <input
+                            type="text"
+                            id="pinCode"
+                            placeholder="Enter PIN code"
+                        >
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- SAVE BUTTON -->
+
+                <div class="profile-save">
+
+                    <button
+                        type="submit"
+                        class="primary-btn"
+                    >
+                        Save Profile
+                    </button>
+
+                </div>
+
+
+            </form>
+
+        </div>
+
+
+
+        <!-- =================================================
+             PROFILE OPTIONS
+        ================================================= -->
+
+        <div class="profile-options">
+
+
+            <!-- MY ORDERS -->
+
+            <a
+                href="orders.html"
+                class="profile-option-card"
+            >
+
+                <div class="option-icon">
+                    📋
+                </div>
+
+
+                <div class="option-content">
+
+                    <h3>
+                        My Orders
+                    </h3>
+
+                    <p>
+                        View your previous orders
+                    </p>
+
+                </div>
+
+
+                <div class="option-arrow">
+                    ›
+                </div>
+
+            </a>
+
+
+
+            <!-- TRACK ORDER -->
+
+            <a
+                href="track-order.html"
+                class="profile-option-card"
+            >
+
+                <div class="option-icon">
+                    📦
+                </div>
+
+
+                <div class="option-content">
+
+                    <h3>
+                        Track Order
+                    </h3>
+
+                    <p>
+                        Check your order status
+                    </p>
+
+                </div>
+
+
+                <div class="option-arrow">
+                    ›
+                </div>
+
+            </a>
+
+
+
+            <!-- LOGOUT -->
+
+            <button
+                type="button"
+                class="profile-option-card logout-card"
+                onclick="logoutUser()"
+            >
+
+                <div class="option-icon">
+                    ⇥
+                </div>
+
+
+                <div class="option-content">
+
+                    <h3>
+                        Logout
+                    </h3>
+
+                    <p>
+                        Sign out from your account
+                    </p>
+
+                </div>
+
+
+                <div class="option-arrow">
+                    ›
+                </div>
+
+            </button>
+
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="site-footer">
+
+    <div class="footer-main">
+
+
+        <!-- NEED HELP -->
+
+        <div class="footer-block">
+
+            <div class="footer-icon">
+                🎧
+            </div>
+
+            <div>
+
+                <h3>
+                    Need Help?
+                </h3>
+
+                <p>
+                    We are here to help you
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- CUSTOMER CARE -->
+
+        <div class="footer-block">
+
+            <div class="footer-icon">
+                📞
+            </div>
+
+            <div>
+
+                <h3>
+                    Customer Care
+                </h3>
+
+                <p>
+                    +91 98765 43210
+                </p>
+
+                <p>
+                    Mon - Sat: 9:00 AM to 7:00 PM
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- EMAIL -->
+
+        <div class="footer-block">
+
+            <div class="footer-icon">
+                ✉
+            </div>
+
+            <div>
+
+                <h3>
+                    Email Us
+                </h3>
+
+                <p>
+                    support@pharmacare.com
+                </p>
+
+                <p>
+                    We reply within 24 hours
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ADDRESS -->
+
+        <div class="footer-block">
+
+            <div class="footer-icon">
+                📍
+            </div>
+
+            <div>
+
+                <h3>
+                    Address
+                </h3>
+
+                <p>
+                    At. Post Sangamner, Dist. Ahmednagar,
+                    Maharashtra - 422605
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- FOLLOW US -->
+
+        <div class="footer-block footer-follow">
+
+            <h3>
+                Follow Us
+            </h3>
+
+            <p>
+                Connect with us
+            </p>
+
+            <div class="social-icons">
+
+                <span>
+                    f
+                </span>
+
+                <span>
+                    ◎
+                </span>
+
+                <span>
+                    ☎
+                </span>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- FOOTER BOTTOM -->
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2025 PharmaCare. All Rights Reserved.
+        </p>
+
+        <div class="footer-bottom-links">
+
+            <a href="#">
+                Privacy Policy
+            </a>
+
+            <a href="#">
+                Terms &amp; Conditions
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script src="../js/main.js"></script>
+
+<script src="../js/profile.js"></script>
+
+
+<script>
+
+function searchFromProfile() {
+
+    const input =
+        document.getElementById("profileSearch");
+
+    if (!input) {
+        return;
+    }
+
+    const value =
+        input.value.trim();
+
+    if (value === "") {
+
+        alert("Please enter a medicine name.");
+
+        return;
+    }
+
+    localStorage.setItem(
+        "searchMedicine",
+        value
+    );
+
+    window.location.href =
+        "medicines.html?search=" +
+        encodeURIComponent(value);
+}
+
+
+function logoutUser() {
+
+    localStorage.removeItem("pharmaLoggedIn");
+
+    localStorage.removeItem("pharmaUser");
+
+    window.location.href = "login.html";
+
+}
+
+</script>
+
+
+</body>
+
+</html>

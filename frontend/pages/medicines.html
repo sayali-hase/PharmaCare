@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Medicines - PharmaCare</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/medicines.css">
+</head>
+
+<body>
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header>
+
+    <div class="top-header">
+
+        <div class="logo-area">
+
+            <div class="logo-icon">+</div>
+
+            <div class="logo-text">
+                <h2>PharmaCare</h2>
+                <p>Your Trusted Online Pharmacy</p>
+            </div>
+
+        </div>
+
+        <div class="header-search">
+
+            <input
+                type="text"
+                id="medicineSearch"
+                placeholder="Search medicines, health products..."
+            >
+
+            <button type="button" id="searchButton">
+                Search
+            </button>
+
+        </div>
+
+        <div class="header-actions">
+
+            <a href="track-order.html" class="action-icon">
+                <span>🚚</span>
+                <small>Track Order</small>
+            </a>
+
+            <a href="offers.html" class="action-icon">
+                <span>🏷️</span>
+                <small>Offers</small>
+            </a>
+
+            <a href="cart.html" class="action-icon cart-icon">
+                <span>🛒</span>
+                <small>Cart</small>
+                <b id="cartCount">0</b>
+            </a>
+
+            <a href="profile.html" class="action-icon">
+                <span>👤</span>
+                <small>Profile</small>
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- NAVIGATION -->
+
+    <nav class="main-nav">
+
+        <a href="../index.html">
+            Home
+        </a>
+
+        <a href="medicines.html" class="active">
+            Medicines
+        </a>
+
+        <a href="medicines.html#categories">
+            Categories
+        </a>
+
+        <a href="offers.html">
+            Offers
+        </a>
+
+        <a href="#health-tips">
+            Health Tips
+        </a>
+
+        <a href="#about">
+            About Us
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!-- =========================================================
+     MAIN
+========================================================= -->
+
+<main>
+
+    <section class="medicines-page">
+
+        <div class="page-header">
+
+            <div>
+
+                <span class="page-label">
+                    PHARMACARE MEDICINES
+                </span>
+
+                <h1>
+                    Medicines
+                </h1>
+
+                <p>
+                    Browse medicines and healthcare products easily.
+                </p>
+
+            </div>
+
+            <div class="sort-box">
+
+                <label for="sortMedicine">
+                    Sort By
+                </label>
+
+                <select id="sortMedicine">
+
+                    <option value="default">
+                        Default
+                    </option>
+
+                    <option value="low">
+                        Price: Low to High
+                    </option>
+
+                    <option value="high">
+                        Price: High to Low
+                    </option>
+
+                    <option value="name">
+                        Name
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             CATEGORIES
+        ====================================================== -->
+
+        <div class="medicine-filters" id="categories">
+
+            <button class="filter-btn active" data-category="all">
+                All
+            </button>
+
+            <button class="filter-btn" data-category="Pain Relief">
+                Pain Relief
+            </button>
+
+            <button class="filter-btn" data-category="Cold & Flu">
+                Cold & Flu
+            </button>
+
+            <button class="filter-btn" data-category="Vitamins">
+                Vitamins
+            </button>
+
+            <button class="filter-btn" data-category="Skin Care">
+                Skin Care
+            </button>
+
+            <button class="filter-btn" data-category="Digestive">
+                Digestive
+            </button>
+
+            <span class="medicine-count" id="medicineCount">
+                Showing all medicines
+            </span>
+
+        </div>
+
+
+        <!-- =====================================================
+             8 MEDICINES
+        ====================================================== -->
+
+        <div class="medicine-grid" id="medicineGrid">
+
+
+            <!-- 1 PARACETAMOL -->
+
+            <article
+                class="medicine-card"
+                data-id="med001"
+                data-category="Pain Relief"
+            >
+
+                <div
+                    class="medicine-image product-link"
+                    data-id="med001"
+                >
+
+                    <div class="medicine-visual tablet-visual">
+
+                        <div class="tablet-strip">
+
+                            <div class="tablet-pill"></div>
+                            <div class="tablet-pill"></div>
+                            <div class="tablet-pill"></div>
+                            <div class="tablet-pill"></div>
+                            <div class="tablet-pill"></div>
+                            <div class="tablet-pill"></div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="medicine-info">
+
+                    <span class="medicine-category">
+                        Pain Relief
+                    </span>
+
+                    <h3 class="product-link" data-id="med001">
+                        Paracetamol 500mg
+                    </h3>
+
+                    <p>
+                        Used for temporary relief from fever and mild pain.
+                    </p>
+
+                    <div class="medicine-rating">
+                        <strong>★ 4.5</strong>
+                        <span>120 Reviews</span>
+                    </div>
+
+                    <div class="medicine-bottom">
+
+                        <div class="medicine-price-box">
+
+                            <strong class="medicine-current-price">
+                                ₹22.50
+                            </strong>
+
+                            <span class="medicine-mrp">
+                                ₹25
+                            </span>
+
+                            <span class="discount-badge">
+                                10% OFF
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="medicine-actions">
+
+                        <button
+                            type="button"
+                            class="add-cart-btn"
+                            data-id="med001"
+                        >
+                            Add to Cart
+                        </button>
+
+                        <button
+                            type="button"
+                            class="buy-btn"
+                            data-id="med001"
+                        >
+                            Buy Now
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- 2 VITAMIN C -->
+
+            <article
+                class="medicine-card"
+                data-id="med002"
+                data-category="Vitamins"
+            >
+
+                <div
+                    class="medicine-image product-link"
+                    data-id="med002"
+                >
+
+                    <div class="medicine-visual bottle-visual">
+
+                        <div class="bottle-cap"></div>
+
+                        <div class="medicine-bottle">
+
+                            <div class="bottle-label">
+                                VIT C
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="medicine-info">
+
+                    <span class="medicine-category">
+                        Vitamins
+                    </span>
+
+                    <h3 class="product-link" data-id="med002">
+                        Vitamin C Tablets
+                    </h3>
+
+                    <p>
+                        Vitamin supplement for daily nutritional support.
+                    </p>
+
+                    <div class="medicine-rating">
+                        <strong>★ 4.6</strong>
+                        <span>98 Reviews</span>
+                    </div>
+
+                    <div class="medicine-bottom">
+
+                        <div class="medicine-price-box">
+
+                            <strong class="medicine-current-price">
+                                ₹102
+                            </strong>
+
+                            <span class="medicine-mrp">
+                                ₹120
+                            </span>
+
+                            <span class="discount-badge">
+                                15% OFF
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="medicine-actions">
+
+                        <button
+                            type="button"
+                            class="add-cart-btn"
+                            data-id="med002"
+                        >
+                            Add to Cart
+                        </button>
+
+                        <button
+                            type="button"
+                            class="buy-btn"
+                            data-id="med002"
+                        >
+                            Buy Now
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- 3 CETIRIZINE -->
+
+            <article
+                class="medicine-card"
+                data-id="med003"
+                data-category="Cold & Flu"
+            >
+
+                <div
+                    class="medicine-image product-link"
+                    data-id="med003"
+                >
+
+                    <div class="medicine-visual tablet-visual blue-tablets">
+
+                        <div class="tablet-strip">
+
+                            <div class="tablet-pill"></div>
+                            <div class="tablet-pill"></div>
+                            <div class="tablet-pill"></div>
+                            <div class="tablet-pill"></div>
+                            <div class="tablet-pill"></div>
+                            <div class="tablet-pill"></div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="medicine-info">
+
+                    <span class="medicine-category">
+                        Cold & Flu
+                    </span>
+
+                    <h3 class="product-link" data-id="med003">
+                        Cetirizine 10mg
+                    </h3>
+
+                    <p>
+                        Commonly used for allergy-related symptoms.
+                    </p>
+
+                    <div class="medicine-rating">
+                        <strong>★ 4.4</strong>
+                        <span>86 Reviews</span>
+                    </div>
+
+                    <div class="medicine-bottom">
+
+                        <div class="medicine-price-box">
+
+                            <strong class="medicine-current-price">
+                                ₹42.75
+                            </strong>
+
+                            <span class="medicine-mrp">
+                                ₹45
+                            </span>
+
+                            <span class="discount-badge">
+                                5% OFF
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="medicine-actions">
+
+                        <button
+                            type="button"
+                            class="add-cart-btn"
+                            data-id="med003"
+                        >
+                            Add to Cart
+                        </button>
+
+                        <button
+                            type="button"
+                            class="buy-btn"
+                            data-id="med003"
+                        >
+                            Buy Now
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- 4 ANTISEPTIC -->
+
+            <article
+                class="medicine-card"
+                data-id="med004"
+                data-category="Skin Care"
+            >
+
+                <div
+                    class="medicine-image product-link"
+                    data-id="med004"
+                >
+
+                    <div class="medicine-visual cream-visual">
+
+                        <div class="cream-tube">
+
+                            <div class="cream-label">
+                                CARE
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="medicine-info">
+
+                    <span class="medicine-category">
+                        Skin Care
+                    </span>
+
+                    <h3 class="product-link" data-id="med004">
+                        Antiseptic Cream
+                    </h3>
+
+                    <p>
+                        Cream for basic skin protection and care.
+                    </p>
+
+                    <div class="medicine-rating">
+                        <strong>★ 4.3</strong>
+                        <span>74 Reviews</span>
+                    </div>
+
+                    <div class="medicine-bottom">
+
+                        <div class="medicine-price-box">
+
+                            <strong class="medicine-current-price">
+                                ₹74.80
+                            </strong>
+
+                            <span class="medicine-mrp">
+                                ₹85
+                            </span>
+
+                            <span class="discount-badge">
+                                12% OFF
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="medicine-actions">
+
+                        <button
+                            type="button"
+                            class="add-cart-btn"
+                            data-id="med004"
+                        >
+                            Add to Cart
+                        </button>
+
+                        <button
+                            type="button"
+                            class="buy-btn"
+                            data-id="med004"
+                        >
+                            Buy Now
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- 5 DIGESTIVE -->
+
+            <article
+                class="medicine-card"
+                data-id="med005"
+                data-category="Digestive"
+            >
+
+                <div
+                    class="medicine-image product-link"
+                    data-id="med005"
+                >
+
+                    <div class="medicine-visual bottle-visual orange-bottle">
+
+                        <div class="bottle-cap"></div>
+
+                        <div class="medicine-bottle">
+
+                            <div class="bottle-label">
+                                DIGEST
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="medicine-info">
+
+                    <span class="medicine-category">
+                        Digestive
+                    </span>
+
+                    <h3 class="product-link" data-id="med005">
+                        Digestive Tablets
+                    </h3>
+
+                    <p>
+                        Digestive support tablets for everyday use.
+                    </p>
+
+                    <div class="medicine-rating">
+                        <strong>★ 4.2</strong>
+                        <span>61 Reviews</span>
+                    </div>
+
+                    <div class="medicine-bottom">
+
+                        <div class="medicine-price-box">
+
+                            <strong class="medicine-current-price">
+                                ₹59.80
+                            </strong>
+
+                            <span class="medicine-mrp">
+                                ₹65
+                            </span>
+
+                            <span class="discount-badge">
+                                8% OFF
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="medicine-actions">
+
+                        <button
+                            type="button"
+                            class="add-cart-btn"
+                            data-id="med005"
+                        >
+                            Add to Cart
+                        </button>
+
+                        <button
+                            type="button"
+                            class="buy-btn"
+                            data-id="med005"
+                        >
+                            Buy Now
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- 6 IBUPROFEN -->
+
+            <article
+                class="medicine-card"
+                data-id="med006"
+                data-category="Pain Relief"
+            >
+
+                <div
+                    class="medicine-image product-link"
+                    data-id="med006"
+                >
+
+                    <div class="medicine-visual tablet-visual">
+
+                        <div class="tablet-strip">
+
+                            <div class="tablet-pill"></div>
+                            <div class="tablet-pill"></div>
+                            <div class="tablet-pill"></div>
+                            <div class="tablet-pill"></div>
+                            <div class="tablet-pill"></div>
+                            <div class="tablet-pill"></div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="medicine-info">
+
+                    <span class="medicine-category">
+                        Pain Relief
+                    </span>
+
+                    <h3 class="product-link" data-id="med006">
+                        Ibuprofen 400mg
+                    </h3>
+
+                    <p>
+                        Used for temporary relief of pain and inflammation.
+                    </p>
+
+                    <div class="medicine-rating">
+                        <strong>★ 4.5</strong>
+                        <span>82 Reviews</span>
+                    </div>
+
+                    <div class="medicine-bottom">
+
+                        <div class="medicine-price-box">
+
+                            <strong class="medicine-current-price">
+                                ₹49.50
+                            </strong>
+
+                            <span class="medicine-mrp">
+                                ₹55
+                            </span>
+
+                            <span class="discount-badge">
+                                10% OFF
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="medicine-actions">
+
+                        <button
+                            type="button"
+                            class="add-cart-btn"
+                            data-id="med006"
+                        >
+                            Add to Cart
+                        </button>
+
+                        <button
+                            type="button"
+                            class="buy-btn"
+                            data-id="med006"
+                        >
+                            Buy Now
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- 7 COUGH SYRUP -->
+
+            <article
+                class="medicine-card"
+                data-id="med007"
+                data-category="Cold & Flu"
+            >
+
+                <div
+                    class="medicine-image product-link"
+                    data-id="med007"
+                >
+
+                    <div class="medicine-visual syrup-visual">
+
+                        <div class="syrup-bottle">
+
+                            <div class="syrup-cap"></div>
+
+                            <div class="syrup-label">
+                                COUGH
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="medicine-info">
+
+                    <span class="medicine-category">
+                        Cold & Flu
+                    </span>
+
+                    <h3 class="product-link" data-id="med007">
+                        Cough Syrup
+                    </h3>
+
+                    <p>
+                        Syrup for temporary relief from cough symptoms.
+                    </p>
+
+                    <div class="medicine-rating">
+                        <strong>★ 4.4</strong>
+                        <span>69 Reviews</span>
+                    </div>
+
+                    <div class="medicine-bottom">
+
+                        <div class="medicine-price-box">
+
+                            <strong class="medicine-current-price">
+                                ₹80.75
+                            </strong>
+
+                            <span class="medicine-mrp">
+                                ₹95
+                            </span>
+
+                            <span class="discount-badge">
+                                15% OFF
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="medicine-actions">
+
+                        <button
+                            type="button"
+                            class="add-cart-btn"
+                            data-id="med007"
+                        >
+                            Add to Cart
+                        </button>
+
+                        <button
+                            type="button"
+                            class="buy-btn"
+                            data-id="med007"
+                        >
+                            Buy Now
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- 8 MULTIVITAMIN -->
+
+            <article
+                class="medicine-card"
+                data-id="med008"
+                data-category="Vitamins"
+            >
+
+                <div
+                    class="medicine-image product-link"
+                    data-id="med008"
+                >
+
+                    <div class="medicine-visual bottle-visual">
+
+                        <div class="bottle-cap"></div>
+
+                        <div class="medicine-bottle">
+
+                            <div class="bottle-label">
+                                MULTI
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="medicine-info">
+
+                    <span class="medicine-category">
+                        Vitamins
+                    </span>
+
+                    <h3 class="product-link" data-id="med008">
+                        Multivitamin Tablets
+                    </h3>
+
+                    <p>
+                        Daily multivitamin supplement for nutritional support.
+                    </p>
+
+                    <div class="medicine-rating">
+                        <strong>★ 4.7</strong>
+                        <span>105 Reviews</span>
+                    </div>
+
+                    <div class="medicine-bottom">
+
+                        <div class="medicine-price-box">
+
+                            <strong class="medicine-current-price">
+                                ₹144
+                            </strong>
+
+                            <span class="medicine-mrp">
+                                ₹180
+                            </span>
+
+                            <span class="discount-badge">
+                                20% OFF
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="medicine-actions">
+
+                        <button
+                            type="button"
+                            class="add-cart-btn"
+                            data-id="med008"
+                        >
+                            Add to Cart
+                        </button>
+
+                        <button
+                            type="button"
+                            class="buy-btn"
+                            data-id="med008"
+                        >
+                            Buy Now
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <p id="noMedicines" class="no-medicines">
+            No medicines found.
+        </p>
+
+    </section>
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="site-footer">
+
+    <div class="footer-main">
+
+        <div class="footer-block">
+
+            <div class="footer-icon">🎧</div>
+
+            <div>
+                <h3>Need Help?</h3>
+                <p>We are here to help you</p>
+            </div>
+
+        </div>
+
+
+        <div class="footer-block">
+
+            <div class="footer-icon">📞</div>
+
+            <div>
+                <h3>Customer Care</h3>
+                <p>+91 98765 43210</p>
+                <p>Mon - Sat: 9:00 AM to 7:00 PM</p>
+            </div>
+
+        </div>
+
+
+        <div class="footer-block">
+
+            <div class="footer-icon">✉</div>
+
+            <div>
+                <h3>Email Us</h3>
+                <p>support@pharmacare.com</p>
+                <p>We reply within 24 hours</p>
+            </div>
+
+        </div>
+
+
+        <div class="footer-block">
+
+            <div class="footer-icon">📍</div>
+
+            <div>
+                <h3>Address</h3>
+                <p>
+                    At. Post Sangamner, Dist. Ahmednagar,
+                    Maharashtra - 422605
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="footer-block footer-follow">
+
+            <h3>Follow Us</h3>
+
+            <p>Connect with us</p>
+
+            <div class="social-icons">
+                <span>f</span>
+                <span>◎</span>
+                <span>☎</span>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2025 PharmaCare. All Rights Reserved.
+        </p>
+
+        <div class="footer-bottom-links">
+
+            <a href="#">Privacy Policy</a>
+
+            <a href="#">Terms &amp; Conditions</a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="../js/medicines.js"></script>
+
+</body>
+</html>

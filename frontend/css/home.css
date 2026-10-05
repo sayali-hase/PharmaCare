@@ -1,0 +1,1150 @@
+/* =========================================================
+   PHARMACARE - HOME PAGE
+========================================================= */
+
+
+/* =========================================================
+   HOME MAIN
+========================================================= */
+
+.home-page {
+    width: 100%;
+}
+
+
+/* =========================================================
+   HERO SECTION
+========================================================= */
+
+.hero-section {
+    position: relative;
+    overflow: hidden;
+
+    width: calc(100% - 20px);
+    max-width: 1200px;
+
+    min-height: 340px;
+
+    margin: 18px auto 30px;
+
+    padding: 28px 45px;
+
+    border: 1px solid #dbe9e2;
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(247, 253, 249, 0.95) 0%,
+            rgba(247, 253, 249, 0.82) 35%,
+            rgba(247, 253, 249, 0.40) 65%,
+            rgba(247, 253, 249, 0.12) 100%
+        ),
+        url("https://images.pexels.com/photos/9155926/pexels-photo-9155926.jpeg?auto=compress&cs=tinysrgb&w=1600");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    box-shadow:
+        0 8px 24px rgba(20, 70, 45, 0.06);
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    width: 55%;
+    max-width: 610px;
+}
+
+
+/* =========================================================
+   HERO LABEL
+========================================================= */
+
+.hero-label {
+    margin: 0 0 8px;
+
+    color: #078b52;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 0.7px;
+}
+
+
+/* =========================================================
+   HERO TITLE
+========================================================= */
+
+.hero-content h1 {
+    margin: 0 0 12px;
+
+    color: #17231d;
+
+    font-size: 38px;
+    line-height: 1.15;
+
+    font-weight: 700;
+}
+
+.hero-content h1 span {
+    color: #078b52;
+}
+
+
+/* =========================================================
+   HERO DESCRIPTION
+========================================================= */
+
+.hero-description {
+    max-width: 520px;
+
+    margin: 0 0 18px;
+
+    color: #59655f;
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   HERO FEATURES
+========================================================= */
+
+.hero-features {
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+
+    margin-bottom: 20px;
+}
+
+
+.hero-feature {
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+
+    color: #303833;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+.hero-feature span:first-child {
+    color: #078b52;
+
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   SHOP NOW BUTTON
+========================================================= */
+
+.shop-btn {
+    min-width: 105px;
+
+    padding: 10px 19px;
+
+    border: none;
+    border-radius: 6px;
+
+    background: #078b52;
+    color: #ffffff;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.shop-btn:hover {
+    background: #067443;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   SECTION COMMON
+========================================================= */
+
+.home-section {
+    width: calc(100% - 20px);
+    max-width: 1200px;
+
+    margin: 0 auto 30px;
+}
+
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 14px;
+}
+
+
+.section-heading h2 {
+    margin: 0;
+
+    color: #17231d;
+
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
+.section-heading p {
+    margin: 0;
+
+    color: #68736d;
+
+    font-size: 12px;
+}
+
+
+.view-all {
+    color: #078b52;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+.view-all:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   CATEGORIES
+========================================================= */
+
+.categories-section {
+    margin-top: 5px;
+}
+
+
+.category-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(7, 1fr);
+
+    gap: 12px;
+}
+
+
+.category-card {
+    min-height: 125px;
+
+    padding: 13px 8px;
+
+    background: #ffffff;
+
+    border: 1px solid #e1e9e5;
+    border-radius: 9px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.category-card:hover {
+    transform: translateY(-3px);
+
+    border-color: #a9d8c1;
+
+    box-shadow:
+        0 6px 18px rgba(20, 70, 45, 0.08);
+}
+
+
+.category-icon {
+    width: 55px;
+    height: 55px;
+
+    margin-bottom: 8px;
+
+    border-radius: 50%;
+
+    background: #eaf8f1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 27px;
+}
+
+
+.category-card h3 {
+    margin: 0;
+
+    color: #303833;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+.category-card p {
+    margin: 3px 0 0;
+
+    color: #7a8580;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   POPULAR MEDICINES
+========================================================= */
+
+.popular-section {
+    margin-top: 8px;
+}
+
+
+.medicine-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 15px;
+}
+
+
+.medicine-card {
+    position: relative;
+
+    min-height: 270px;
+
+    padding: 14px;
+
+    background: #ffffff;
+
+    border: 1px solid #e1e9e5;
+    border-radius: 9px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.medicine-card:hover {
+    transform: translateY(-3px);
+
+    border-color: #b6dcc9;
+
+    box-shadow:
+        0 7px 20px rgba(20, 70, 45, 0.08);
+}
+
+
+/* =========================================================
+   MEDICINE DISCOUNT
+========================================================= */
+
+.discount-badge {
+    position: absolute;
+
+    top: 10px;
+    left: 10px;
+
+    padding: 4px 7px;
+
+    border-radius: 4px;
+
+    background: #e9f8ef;
+    color: #078b52;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   MEDICINE IMAGE BOX
+========================================================= */
+
+.medicine-image {
+    width: 100%;
+    height: 125px;
+
+    margin-bottom: 10px;
+
+    background: #f4faf7;
+
+    border: 1px solid #e3eee8;
+    border-radius: 7px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+
+.medicine-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+}
+
+
+.medicine-icon {
+    font-size: 65px;
+}
+
+
+/* =========================================================
+   MEDICINE DETAILS
+========================================================= */
+
+.medicine-card h3 {
+    margin: 0 0 4px;
+
+    color: #27312c;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    line-height: 1.35;
+}
+
+
+.medicine-card .medicine-type {
+    margin: 0 0 8px;
+
+    color: #7a8580;
+
+    font-size: 11px;
+}
+
+
+.medicine-price {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    margin-bottom: 10px;
+}
+
+
+.current-price {
+    color: #078b52;
+
+    font-size: 15px;
+    font-weight: 700;
+}
+
+
+.old-price {
+    color: #929b96;
+
+    font-size: 11px;
+
+    text-decoration: line-through;
+}
+
+
+/* =========================================================
+   ADD TO CART
+========================================================= */
+
+.add-cart-btn {
+    width: 100%;
+
+    min-height: 34px;
+
+    border: 1px solid #078b52;
+    border-radius: 5px;
+
+    background: #ffffff;
+    color: #078b52;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.add-cart-btn:hover {
+    background: #078b52;
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   OFFERS SECTION
+========================================================= */
+
+.offers-section {
+    margin-top: 8px;
+}
+
+
+.offer-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+
+.offer-card {
+    min-height: 115px;
+
+    padding: 18px;
+
+    border-radius: 9px;
+
+    background: #f1faf5;
+
+    border: 1px solid #d9ece1;
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+}
+
+
+.offer-icon {
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 24px;
+}
+
+
+.offer-card h3 {
+    margin: 0 0 4px;
+
+    color: #17231d;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+.offer-card p {
+    margin: 0;
+
+    color: #68736d;
+
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   HEALTH TIPS
+========================================================= */
+
+.health-tips-section {
+    margin-top: 8px;
+}
+
+
+.health-tips-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+
+.health-tip-card {
+    min-height: 110px;
+
+    padding: 17px;
+
+    background: #ffffff;
+
+    border: 1px solid #e1e9e5;
+    border-radius: 9px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+}
+
+
+.health-tip-icon {
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #eaf8f1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 23px;
+}
+
+
+.health-tip-card h3 {
+    margin: 0 0 4px;
+
+    color: #27312c;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+.health-tip-card p {
+    margin: 0;
+
+    color: #68736d;
+
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   ABOUT US
+========================================================= */
+
+.about-section {
+    margin-top: 8px;
+
+    padding: 22px 25px;
+
+    background: #f7fbf9;
+
+    border: 1px solid #e1ece6;
+    border-radius: 10px;
+}
+
+
+.about-section h2 {
+    margin: 0 0 8px;
+
+    color: #17231d;
+
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
+.about-section p {
+    max-width: 950px;
+
+    margin: 0;
+
+    color: #68736d;
+
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.site-footer {
+    background: #0756a6;
+
+    color: #fff;
+
+    margin-top: 28px;
+}
+
+
+.footer-main {
+    max-width: 1200px;
+
+    min-height: 88px;
+
+    margin: 0 auto;
+
+    padding: 9px 18px;
+
+    display: grid;
+
+    grid-template-columns:
+        1.1fr
+        1.15fr
+        1.25fr
+        1.55fr
+        0.95fr;
+
+    align-items: center;
+}
+
+
+.footer-block {
+    min-height: 58px;
+
+    padding: 2px 17px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    border-right:
+        1px solid rgba(255, 255, 255, 0.35);
+}
+
+
+.footer-block:first-child {
+    padding-left: 0;
+}
+
+
+.footer-block:last-child {
+    border-right: 0;
+}
+
+
+.footer-icon {
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.75);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+}
+
+
+.footer-block h3 {
+    margin: 0 0 3px;
+
+    color: #fff;
+
+    font-size: 13px;
+}
+
+
+.footer-block p {
+    margin: 0;
+
+    color: #fff;
+
+    font-size: 12px;
+    line-height: 1.35;
+}
+
+
+/* =========================================================
+   FOLLOW US
+========================================================= */
+
+.footer-follow {
+    display: block;
+}
+
+
+.footer-follow h3 {
+    margin-bottom: 2px;
+}
+
+
+.social-icons {
+    display: flex;
+
+    gap: 6px;
+
+    margin-top: 5px;
+}
+
+
+.social-icons span {
+    width: 25px;
+    height: 25px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, 0.12);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.45);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   FOOTER BOTTOM
+========================================================= */
+
+.footer-bottom {
+    min-height: 31px;
+
+    padding: 6px 18px;
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.3);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 22px;
+}
+
+
+.footer-bottom p,
+.footer-bottom-links a {
+    margin: 0;
+
+    color: #eaf3fb;
+
+    font-size: 12px;
+}
+
+
+.footer-bottom-links {
+    display: flex;
+
+    gap: 15px;
+}
+
+
+/* =========================================================
+   RESPONSIVE - 1100px
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .category-grid {
+        grid-template-columns:
+            repeat(4, 1fr);
+    }
+
+    .medicine-grid {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+    .footer-main {
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        row-gap: 10px;
+    }
+
+    .footer-block:nth-child(3) {
+        border-right: 0;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - 900px
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .hero-section {
+        padding: 28px 35px;
+    }
+
+    .hero-content {
+        width: 65%;
+    }
+
+    .hero-content h1 {
+        font-size: 34px;
+    }
+
+    .category-grid {
+        grid-template-columns:
+            repeat(4, 1fr);
+    }
+
+    .medicine-grid {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+    .offer-grid,
+    .health-tips-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - 800px
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .hero-section {
+        min-height: 320px;
+
+        padding: 25px 28px;
+
+        background-position: center;
+    }
+
+    .hero-content {
+        width: 70%;
+    }
+
+    .hero-content h1 {
+        font-size: 31px;
+    }
+
+    .hero-description {
+        font-size: 13px;
+    }
+
+    .hero-features {
+        gap: 12px;
+
+        flex-wrap: wrap;
+    }
+
+    .category-grid {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+    .medicine-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .footer-main {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+    .footer-block {
+        border-right: 0;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - 600px
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .hero-section {
+        min-height: 300px;
+
+        margin-top: 15px;
+
+        padding: 25px 22px;
+
+        background-position: center;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .hero-description {
+        max-width: 100%;
+
+        font-size: 12px;
+    }
+
+    .hero-features {
+        gap: 8px;
+    }
+
+    .hero-feature {
+        font-size: 11px;
+    }
+
+    .category-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 10px;
+    }
+
+    .medicine-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 10px;
+    }
+
+    .offer-grid,
+    .health-tips-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .home-section {
+        width: calc(100% - 20px);
+    }
+
+    .section-heading h2 {
+        font-size: 18px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - 500px
+========================================================= */
+
+@media (max-width: 500px) {
+
+    .hero-section {
+        min-height: 290px;
+
+        padding: 22px 18px;
+    }
+
+    .hero-content h1 {
+        font-size: 26px;
+    }
+
+    .hero-label {
+        font-size: 11px;
+    }
+
+    .hero-description {
+        font-size: 12px;
+    }
+
+    .hero-features {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 5px;
+
+        margin-bottom: 15px;
+    }
+
+    .category-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .medicine-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .medicine-card {
+        min-height: auto;
+    }
+
+    .medicine-image {
+        height: 150px;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr;
+
+        padding: 15px;
+    }
+
+    .footer-block {
+        padding: 6px 5px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+
+        gap: 4px;
+
+        text-align: center;
+    }
+
+    .footer-bottom p,
+    .footer-bottom-links a {
+        font-size: 12px;
+    }
+}

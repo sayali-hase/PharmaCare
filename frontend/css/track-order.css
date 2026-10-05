@@ -1,0 +1,677 @@
+/* =========================================================
+   PHARMACARE
+   TRACK ORDER PAGE STYLE
+========================================================= */
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.track-order-page {
+    width: 90%;
+    max-width: 1100px;
+    min-height: 500px;
+    margin: 0 auto;
+    padding: 25px 0 40px;
+    background: #fff;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.page-header {
+    width: 100%;
+    max-width: 1100px;
+    margin: 18px auto 18px;
+    padding: 18px 20px;
+    background: #f5f9f7;
+    border: 1px solid #e1ebe6;
+    border-radius: 7px;
+}
+
+.page-header h1 {
+    margin: 0;
+    color: #17324d;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.page-header p {
+    margin: 5px 0 0;
+    color: #68736d;
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   BREADCRUMB
+========================================================= */
+
+.breadcrumb {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto 18px;
+    color: #777;
+    font-size: 12px;
+}
+
+.breadcrumb a {
+    color: #078b52;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   SEARCH BOX
+========================================================= */
+
+.track-search-box {
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    gap: 10px;
+    margin: 0 auto 18px;
+}
+
+.track-search-box input {
+    flex: 1;
+    min-width: 0;
+    height: 40px;
+    padding: 0 12px;
+    border: 1px solid #d6dfda;
+    border-radius: 6px;
+    background: #fff;
+    color: #303833;
+    font-size: 12px;
+}
+
+.track-search-box input::placeholder {
+    color: #8a9398;
+    font-size: 12px;
+}
+
+.track-search-box input:focus {
+    border-color: #078b52;
+}
+
+.track-search-box button {
+    width: 115px;
+    height: 40px;
+    border: 0;
+    border-radius: 6px;
+    background: #078b52;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.track-search-box button:hover {
+    background: #067443;
+}
+
+
+/* =========================================================
+   RESULT MESSAGE
+========================================================= */
+
+.track-result {
+    width: 100%;
+    max-width: 700px;
+    min-height: 20px;
+    margin: 0 auto 15px;
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   TRACK INFO
+========================================================= */
+
+#trackInfo {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   TRACK CARD
+========================================================= */
+
+.track-card {
+    width: 100%;
+    background: #fff;
+    border: 1px solid #dfe8e3;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.04);
+}
+
+
+/* =========================================================
+   CARD HEADER
+========================================================= */
+
+.track-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 17px 20px;
+    background: #f8fafc;
+    border-bottom: 1px solid #e5e9ed;
+}
+
+.track-card-header h2 {
+    margin: 0;
+    color: #17324d;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.track-card-header p {
+    margin: 5px 0 0;
+    color: #777;
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.order-status {
+    padding: 6px 12px;
+    border-radius: 15px;
+    background: #e9f8ee;
+    color: #148044;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   TRACKING PROGRESS
+========================================================= */
+
+.track-progress {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 23px 25px 18px;
+    border-bottom: 1px solid #e5e9ed;
+}
+
+.track-progress::before {
+    content: "";
+    position: absolute;
+    top: 33px;
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background: #dce3e8;
+    z-index: 0;
+}
+
+.track-step {
+    width: 20%;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.step-circle {
+    width: 22px;
+    height: 22px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: #dce3e8;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.track-step.completed .step-circle,
+.track-step.active .step-circle {
+    background: #078b52;
+}
+
+.track-step span {
+    display: block;
+    margin-top: 7px;
+    color: #777;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.track-step.completed span,
+.track-step.active span {
+    color: #078b52;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   ORDER INFORMATION
+========================================================= */
+
+.track-info-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    padding: 18px 20px;
+}
+
+.track-info-box {
+    min-width: 0;
+    padding: 12px;
+    background: #f8fbf9;
+    border: 1px solid #e5eee9;
+    border-radius: 6px;
+}
+
+.track-info-box span {
+    display: block;
+    margin-bottom: 4px;
+    color: #777;
+    font-size: 12px;
+}
+
+.track-info-box strong {
+    display: block;
+    color: #263d52;
+    font-size: 13px;
+    font-weight: 600;
+    word-break: break-word;
+}
+
+
+/* =========================================================
+   DELIVERY ADDRESS
+========================================================= */
+
+.track-address {
+    margin: 0 20px;
+    padding: 15px;
+    background: #fff;
+    border: 1px solid #e0e8e4;
+    border-radius: 6px;
+}
+
+.track-address h3 {
+    margin: 0 0 6px;
+    color: #17324d;
+    font-size: 14px;
+}
+
+.track-address p {
+    margin: 0;
+    color: #68736d;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   ORDERED MEDICINES
+========================================================= */
+
+.track-items {
+    margin: 20px;
+    padding-top: 17px;
+    border-top: 1px solid #e5e9ed;
+}
+
+.track-items h3 {
+    margin: 0 0 10px;
+    color: #17324d;
+    font-size: 14px;
+}
+
+.track-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid #edf0f2;
+}
+
+.track-item:last-child {
+    border-bottom: 0;
+}
+
+.track-item-icon {
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    border-radius: 7px;
+    background: #f4f9f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.track-item-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.track-item-info strong {
+    display: block;
+    color: #333;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.track-item-info small {
+    display: block;
+    margin-top: 3px;
+    color: #777;
+    font-size: 12px;
+}
+
+.track-item-price {
+    flex-shrink: 0;
+    color: #17324d;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   TOTAL
+========================================================= */
+
+.track-total {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+    margin: 0 20px;
+    padding: 13px 0 18px;
+    border-top: 1px solid #e5e9ed;
+}
+
+.track-total span {
+    color: #666;
+    font-size: 12px;
+}
+
+.track-total strong {
+    color: #078b52;
+    font-size: 18px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.site-footer {
+    width: 100%;
+    background: #0756a6;
+    color: #fff;
+    margin-top: 28px;
+}
+
+.footer-main {
+    max-width: 1200px;
+    min-height: 88px;
+    margin: 0 auto;
+    padding: 9px 18px;
+    display: grid;
+    grid-template-columns:
+        1.1fr
+        1.15fr
+        1.25fr
+        1.55fr
+        0.95fr;
+    align-items: center;
+}
+
+.footer-block {
+    min-height: 58px;
+    padding: 2px 17px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    border-right: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.footer-block:first-child {
+    padding-left: 0;
+}
+
+.footer-block:last-child {
+    border-right: 0;
+}
+
+.footer-icon {
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.footer-block h3 {
+    margin: 0 0 3px;
+    color: #fff;
+    font-size: 13px;
+}
+
+.footer-block p {
+    margin: 0;
+    color: #fff;
+    font-size: 12px;
+    line-height: 1.35;
+}
+
+.footer-follow {
+    display: block;
+}
+
+.social-icons {
+    display: flex;
+    gap: 6px;
+    margin-top: 5px;
+}
+
+.social-icons span {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   FOOTER BOTTOM
+========================================================= */
+
+.footer-bottom {
+    min-height: 31px;
+    padding: 6px 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+}
+
+.footer-bottom p,
+.footer-bottom-links a {
+    margin: 0;
+    color: #eaf3fb;
+    font-size: 12px;
+}
+
+.footer-bottom-links {
+    display: flex;
+    gap: 15px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .footer-main {
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 10px;
+    }
+
+    .footer-block:nth-child(3) {
+        border-right: 0;
+    }
+}
+
+
+@media (max-width: 900px) {
+
+    .track-order-page {
+        width: 92%;
+    }
+
+    .track-info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 800px) {
+
+    .footer-main {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-block {
+        border-right: 0;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .track-card-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .order-status {
+        align-self: flex-start;
+    }
+
+    .track-progress {
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .track-progress::before {
+        display: none;
+    }
+
+    .track-step {
+        min-width: 110px;
+        width: 110px;
+        flex-shrink: 0;
+    }
+}
+
+
+@media (max-width: 550px) {
+
+    .track-order-page {
+        width: 94%;
+        padding-top: 20px;
+    }
+
+    .track-search-box {
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    .track-search-box button {
+        width: 100%;
+    }
+
+    .track-info-grid {
+        grid-template-columns: 1fr;
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .track-address {
+        margin-left: 14px;
+        margin-right: 14px;
+    }
+
+    .track-items {
+        margin-left: 14px;
+        margin-right: 14px;
+    }
+
+    .track-total {
+        margin-left: 14px;
+        margin-right: 14px;
+    }
+
+    .track-card-header {
+        padding: 14px;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 4px;
+    }
+}
+
+
+@media (max-width: 400px) {
+
+    .track-item {
+        gap: 8px;
+    }
+
+    .track-item-icon {
+        width: 34px;
+        height: 34px;
+        font-size: 16px;
+    }
+
+    .footer-bottom {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}

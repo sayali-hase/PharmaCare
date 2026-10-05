@@ -1,0 +1,811 @@
+/* =========================================
+   PHARMACARE - COMMON STYLE
+   style.css
+========================================= */
+
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    margin: 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #ffffff;
+
+    color: #252d31;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+img {
+    max-width: 100%;
+
+    display: block;
+}
+
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+}
+
+
+button {
+    cursor: pointer;
+}
+
+
+a {
+    color: inherit;
+
+    text-decoration: none;
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+main {
+    width: 100%;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   TOP HEADER
+========================================= */
+
+.top-header {
+
+    width: calc(100% - 20px);
+
+    max-width: 1200px;
+
+    height: 76px;
+
+    margin: 6px auto 0;
+
+    padding: 8px 18px;
+
+    background: #ffffff;
+
+    border: 1px solid #e1e7e4;
+
+    border-radius: 7px 7px 0 0;
+
+    display: grid;
+
+    grid-template-columns:
+        245px
+        minmax(300px, 1fr)
+        430px;
+
+    align-items: center;
+
+    gap: 22px;
+}
+
+
+/* =========================================
+   LOGO AREA
+========================================= */
+
+.logo-area {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    min-width: 0;
+}
+
+
+.logo-icon {
+
+    width: 43px;
+
+    height: 43px;
+
+    flex-shrink: 0;
+
+    border-radius: 8px;
+
+    background: #078b52;
+
+    color: #ffffff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 29px;
+
+    font-weight: 700;
+
+    line-height: 1;
+}
+
+
+.logo-text {
+
+    min-width: 0;
+}
+
+
+.logo-text h2 {
+
+    margin: 0;
+
+    color: #20272c;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    line-height: 1.15;
+}
+
+
+.logo-text p {
+
+    margin: 3px 0 0;
+
+    color: #078b52;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   HEADER SEARCH
+========================================= */
+
+.header-search {
+
+    width: 100%;
+
+    height: 37px;
+
+    display: flex;
+
+    align-items: stretch;
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: 1px solid #d8e1dd;
+
+    border-radius: 6px;
+}
+
+
+.header-search input {
+
+    flex: 1;
+
+    min-width: 0;
+
+    height: 100%;
+
+    border: 0;
+
+    outline: 0;
+
+    background: #ffffff;
+
+    color: #30383d;
+
+    padding: 0 13px;
+
+    font-size: 12px;
+}
+
+
+.header-search input::placeholder {
+
+    color: #8a9398;
+
+    font-size: 12px;
+}
+
+
+.header-search button {
+
+    width: 72px;
+
+    height: 100%;
+
+    border: 0;
+
+    background: #078b52;
+
+    color: #ffffff;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    transition: background .2s ease;
+}
+
+
+.header-search button:hover {
+
+    background: #067443;
+}
+
+
+/* =========================================
+   HEADER ACTIONS
+========================================= */
+
+.header-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 20px;
+
+    min-width: 0;
+}
+
+
+.action-icon {
+
+    min-width: 62px;
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 2px;
+
+    color: #30383d;
+
+    text-decoration: none;
+
+    transition: color .2s ease;
+}
+
+
+.action-icon > span {
+
+    font-size: 19px;
+
+    line-height: 20px;
+}
+
+
+.action-icon small {
+
+    font-size: 12px;
+
+    line-height: 16px;
+
+    font-weight: 600;
+
+    color: #30383d;
+
+    white-space: nowrap;
+}
+
+
+.action-icon:hover {
+
+    color: #078b52;
+}
+
+
+.action-icon:hover small {
+
+    color: #078b52;
+}
+
+
+/* =========================================
+   CART COUNT
+========================================= */
+
+.cart-icon b {
+
+    position: absolute;
+
+    top: -4px;
+
+    right: 7px;
+
+    width: 17px;
+
+    height: 17px;
+
+    border-radius: 50%;
+
+    background: #078b52;
+
+    color: #ffffff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    line-height: 1;
+}
+
+
+/* =========================================
+   MAIN NAVIGATION
+========================================= */
+
+.main-nav {
+
+    width: calc(100% - 20px);
+
+    max-width: 1200px;
+
+    height: 41px;
+
+    margin: 0 auto;
+
+    padding: 0 15px;
+
+    background: #ffffff;
+
+    border: 1px solid #e1e7e4;
+
+    border-top: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 34px;
+}
+
+
+.main-nav a {
+
+    height: 41px;
+
+    padding: 0 2px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #30383d;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    border-bottom: 2px solid transparent;
+
+    transition:
+        color .2s ease,
+        border-color .2s ease;
+}
+
+
+.main-nav a:hover {
+
+    color: #078b52;
+
+    border-bottom-color: #078b52;
+}
+
+
+.main-nav a.active {
+
+    color: #078b52;
+
+    border-bottom-color: #078b52;
+}
+
+
+/* =========================================
+   COMMON BUTTON
+========================================= */
+
+.primary-btn {
+
+    border: 0;
+
+    background: #078b52;
+
+    color: #ffffff;
+
+    padding: 9px 17px;
+
+    border-radius: 6px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+.primary-btn:hover {
+
+    background: #067443;
+}
+
+
+/* =========================================
+   COMMON INPUT
+========================================= */
+
+input,
+select,
+textarea {
+
+    font-size: 12px;
+
+    color: #30383d;
+}
+
+
+input:focus,
+select:focus,
+textarea:focus {
+
+    outline: none;
+}
+
+
+/* =========================================
+   COMMON CARD
+========================================= */
+
+.card {
+
+    background: #ffffff;
+
+    border: 1px solid #e2e9e6;
+
+    border-radius: 9px;
+}
+
+
+/* =========================================
+   SCROLLBAR
+========================================= */
+
+::-webkit-scrollbar {
+
+    width: 7px;
+
+    height: 7px;
+}
+
+
+::-webkit-scrollbar-track {
+
+    background: #f4f7f5;
+}
+
+
+::-webkit-scrollbar-thumb {
+
+    background: #b8c9c0;
+
+    border-radius: 10px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+
+    background: #078b52;
+}
+
+
+/* =========================================
+   RESPONSIVE - 1100px
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .top-header {
+
+        grid-template-columns:
+            220px
+            minmax(260px, 1fr)
+            350px;
+
+        gap: 15px;
+
+        padding-left: 14px;
+
+        padding-right: 14px;
+    }
+
+
+    .header-actions {
+
+        gap: 12px;
+    }
+
+
+    .main-nav {
+
+        gap: 25px;
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE - 900px
+========================================= */
+
+@media (max-width: 900px) {
+
+    .top-header {
+
+        grid-template-columns:
+            210px
+            1fr
+            280px;
+
+        gap: 12px;
+    }
+
+
+    .logo-text h2 {
+
+        font-size: 17px;
+    }
+
+
+    .logo-text p {
+
+        font-size: 10px;
+    }
+
+
+    .action-icon {
+
+        min-width: 55px;
+    }
+
+
+    .action-icon small {
+
+        font-size: 11px;
+    }
+
+
+    .main-nav {
+
+        gap: 19px;
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE - 760px
+========================================= */
+
+@media (max-width: 760px) {
+
+    .top-header {
+
+        width: calc(100% - 16px);
+
+        height: auto;
+
+        padding: 12px;
+
+        grid-template-columns: 1fr;
+
+        gap: 11px;
+    }
+
+
+    .logo-area {
+
+        justify-content: center;
+    }
+
+
+    .header-search {
+
+        height: 37px;
+    }
+
+
+    .header-actions {
+
+        justify-content: center;
+
+        gap: 22px;
+    }
+
+
+    .main-nav {
+
+        width: calc(100% - 16px);
+
+        height: auto;
+
+        min-height: 42px;
+
+        padding: 7px 10px;
+
+        flex-wrap: wrap;
+
+        gap: 13px 20px;
+    }
+
+
+    .main-nav a {
+
+        height: 32px;
+
+        font-size: 12px;
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE - 500px
+========================================= */
+
+@media (max-width: 500px) {
+
+    body {
+
+        font-size: 12px;
+    }
+
+
+    .top-header {
+
+        margin-top: 4px;
+    }
+
+
+    .logo-icon {
+
+        width: 40px;
+
+        height: 40px;
+
+        font-size: 27px;
+    }
+
+
+    .logo-text h2 {
+
+        font-size: 17px;
+    }
+
+
+    .logo-text p {
+
+        font-size: 10px;
+    }
+
+
+    .header-actions {
+
+        gap: 12px;
+
+        justify-content: space-around;
+    }
+
+
+    .action-icon {
+
+        min-width: 52px;
+    }
+
+
+    .action-icon > span {
+
+        font-size: 18px;
+    }
+
+
+    .action-icon small {
+
+        font-size: 11px;
+    }
+
+
+    .main-nav {
+
+        gap: 8px 14px;
+    }
+
+
+    .main-nav a {
+
+        font-size: 11px;
+    }
+
+}
+/* ================= HOME MEDICINE DISCOUNTS ================= */
+
+.home-price-box {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    flex-wrap: wrap;
+}
+
+.home-current-price {
+    color: #078b52;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.home-mrp {
+    color: #8a9398;
+    font-size: 11px;
+    text-decoration: line-through;
+}
+
+.home-discount {
+    background: #e7f7ef;
+    color: #078b52;
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 700;
+}

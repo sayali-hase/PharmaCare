@@ -1,0 +1,1042 @@
+/* ========================================================= 
+   PRODUCT DETAILS PAGE 
+========================================================= */ 
+ 
+.product-page { 
+    width: calc(100% - 36px); 
+    max-width: 1200px; 
+    margin: 18px auto 35px; 
+} 
+ 
+ 
+/* ========================================================= 
+   BREADCRUMB 
+========================================================= */ 
+ 
+.breadcrumb { 
+    display: flex; 
+    align-items: center; 
+    gap: 7px; 
+    margin-bottom: 14px; 
+    font-size: 11px; 
+    color: #7a858a; 
+} 
+ 
+.breadcrumb a { 
+    color: #078b52; 
+    text-decoration: none; 
+    font-weight: 600; 
+} 
+ 
+.breadcrumb a:hover { 
+    text-decoration: underline; 
+} 
+ 
+ 
+/* ========================================================= 
+   MAIN PRODUCT CARD 
+========================================================= */ 
+ 
+.product-details-card { 
+    display: grid; 
+    grid-template-columns: 42% 58%; 
+    gap: 30px; 
+    padding: 22px; 
+    background: #fff; 
+    border: 1px solid #e2e9e6; 
+    border-radius: 10px; 
+    box-shadow: 0 5px 18px rgba(25, 82, 56, 0.07); 
+} 
+ 
+ 
+/* ========================================================= 
+   LEFT SIDE 
+========================================================= */ 
+ 
+.product-left { 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+} 
+ 
+.product-image { 
+    width: 100%; 
+    min-height: 310px; 
+    background: #f4f9f6; 
+    border: 1px solid #e4eee9; 
+    border-radius: 9px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    overflow: hidden; 
+} 
+ 
+ 
+/* ========================================================= 
+   PRODUCT VISUALS 
+========================================================= */ 
+ 
+.product-image .medicine-visual { 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    position: relative; 
+} 
+ 
+ 
+/* TABLET */ 
+ 
+.product-image .tablet-visual { 
+    width: 245px; 
+    height: 175px; 
+    transform: rotate(-6deg); 
+} 
+ 
+.product-image .tablet-strip { 
+    width: 220px; 
+    height: 130px; 
+    padding: 17px; 
+    border-radius: 13px; 
+    background: linear-gradient(145deg, #ffffff, #edf3f1); 
+    border: 1px solid #cbd8d4; 
+    box-shadow: 0 12px 25px rgba(31, 67, 51, 0.12); 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 12px; 
+} 
+ 
+.product-image .tablet-pill { 
+    border-radius: 50%; 
+    background: radial-gradient(
+        circle at 35% 30%, 
+        #ffffff 0%, 
+        #eef3f1 42%, 
+        #cbd8d4 100% 
+    ); 
+    border: 1px solid #c4d1cd; 
+} 
+ 
+.product-image .blue-tablets .tablet-pill { 
+    background: radial-gradient(
+        circle at 35% 30%, 
+        #e7f8ff 0%, 
+        #a7d9ed 48%, 
+        #69add0 100% 
+    ); 
+    border-color: #72b4d4; 
+} 
+ 
+ 
+/* ========================================================= 
+   BOTTLE 
+========================================================= */ 
+ 
+.product-image .bottle-visual { 
+    width: 210px; 
+    height: 250px; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: flex-end; 
+} 
+ 
+.product-image .bottle-cap { 
+    width: 125px; 
+    height: 34px; 
+    background: #078b52; 
+    border-radius: 9px 9px 4px 4px; 
+    position: relative; 
+    z-index: 2; 
+} 
+ 
+.product-image .medicine-bottle { 
+    width: 175px; 
+    height: 185px; 
+    margin-top: -3px; 
+    border: 1px solid #bddbcd; 
+    border-radius: 14px 14px 25px 25px; 
+    background: linear-gradient(
+        90deg, 
+        #edfff7, 
+        #ffffff, 
+        #e6f7ee 
+    ); 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    box-shadow: 0 12px 25px rgba(31, 67, 51, 0.11); 
+} 
+ 
+.product-image .bottle-label { 
+    width: 130px; 
+    height: 70px; 
+    background: #078b52; 
+    border-radius: 7px; 
+    color: #fff; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    font-size: 17px; 
+    font-weight: 700; 
+} 
+ 
+ 
+/* ORANGE BOTTLE */ 
+ 
+.product-image .orange-bottle .medicine-bottle { 
+    background: linear-gradient(
+        90deg, 
+        #fff3df, 
+        #ffffff, 
+        #ffe5c1 
+    ); 
+    border-color: #e7c18d; 
+} 
+ 
+.product-image .orange-bottle .bottle-label, 
+.product-image .orange-bottle .bottle-cap { 
+    background: #e58b27; 
+} 
+ 
+ 
+/* ========================================================= 
+   CREAM 
+========================================================= */ 
+ 
+.product-image .cream-visual { 
+    width: 200px; 
+    height: 260px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+} 
+ 
+.product-image .cream-tube { 
+    width: 145px; 
+    height: 220px; 
+    border: 1px solid #d3dfdb; 
+    border-radius: 13px 13px 22px 22px; 
+    background: linear-gradient(
+        90deg, 
+        #ffffff, 
+        #edf8f4, 
+        #ffffff 
+    ); 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    transform: rotate(-7deg); 
+    position: relative; 
+    box-shadow: 0 12px 25px rgba(31, 67, 51, 0.11); 
+} 
+ 
+.product-image .cream-tube::after { 
+    content: ""; 
+    position: absolute; 
+    bottom: -16px; 
+    width: 65px; 
+    height: 23px; 
+    background: #c7d2ce; 
+    border-radius: 0 0 8px 8px; 
+} 
+ 
+.product-image .cream-label { 
+    width: 120px; 
+    height: 75px; 
+    background: #078b52; 
+    border-radius: 7px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    color: #fff; 
+    font-size: 15px; 
+    font-weight: 700; 
+} 
+ 
+ 
+/* ========================================================= 
+   RIGHT SIDE 
+========================================================= */ 
+ 
+.product-right { 
+    padding: 10px 5px; 
+} 
+ 
+.product-category { 
+    display: inline-block; 
+    padding: 5px 8px; 
+    margin-bottom: 8px; 
+    border-radius: 4px; 
+    background: #e7f7ef; 
+    color: #078b52; 
+    font-size: 10px; 
+    font-weight: 700; 
+} 
+ 
+.product-right h1 { 
+    margin: 0 0 7px; 
+    color: #20272c; 
+    font-size: 26px; 
+    line-height: 1.2; 
+} 
+ 
+ 
+/* ========================================================= 
+   RATING 
+========================================================= */ 
+ 
+.product-rating { 
+    display: flex; 
+    align-items: center; 
+    gap: 8px; 
+    margin-bottom: 13px; 
+} 
+ 
+.product-rating strong { 
+    color: #e8a817; 
+    font-size: 13px; 
+} 
+ 
+.product-rating span { 
+    color: #68747a; 
+    font-size: 11px; 
+} 
+ 
+ 
+/* ========================================================= 
+   PRICE 
+========================================================= */ 
+ 
+.product-price-section { 
+    margin-bottom: 13px; 
+} 
+ 
+.price-row { 
+    display: flex; 
+    align-items: center; 
+    flex-wrap: wrap; 
+    gap: 9px; 
+} 
+ 
+.product-current-price { 
+    color: #078b52; 
+    font-size: 25px; 
+    font-weight: 700; 
+} 
+ 
+.product-mrp { 
+    color: #8a9398; 
+    font-size: 13px; 
+    text-decoration: line-through; 
+} 
+ 
+.product-discount { 
+    padding: 4px 7px; 
+    border-radius: 4px; 
+    background: #e7f7ef; 
+    color: #078b52; 
+    font-size: 10px; 
+    font-weight: 700; 
+} 
+ 
+.product-price-section small { 
+    display: block; 
+    margin-top: 3px; 
+    color: #7d878b; 
+    font-size: 10px; 
+} 
+ 
+.product-right hr { 
+    border: 0; 
+    border-top: 1px solid #e2e9e6; 
+    margin: 15px 0; 
+} 
+ 
+ 
+/* ========================================================= 
+   DESCRIPTION 
+========================================================= */ 
+ 
+.product-description h3 { 
+    margin: 0 0 7px; 
+    color: #252d31; 
+    font-size: 13px; 
+} 
+ 
+.product-description p { 
+    margin: 0; 
+    color: #69757a; 
+    font-size: 11px; 
+    line-height: 1.55; 
+} 
+ 
+ 
+/* ========================================================= 
+   QUANTITY 
+========================================================= */ 
+ 
+.quantity-section { 
+    display: flex; 
+    align-items: center; 
+    gap: 15px; 
+    margin-top: 18px; 
+} 
+ 
+.quantity-section strong { 
+    color: #374148; 
+    font-size: 12px; 
+} 
+ 
+.quantity-control { 
+    display: flex; 
+    align-items: center; 
+    border: 1px solid #d9e5df; 
+    border-radius: 5px; 
+    overflow: hidden; 
+} 
+ 
+.quantity-control button { 
+    width: 31px; 
+    height: 31px; 
+    border: 0; 
+    background: #edf8f3; 
+    color: #078b52; 
+    font-size: 18px; 
+    cursor: pointer; 
+    font-weight: 700; 
+} 
+ 
+.quantity-control input { 
+    width: 40px; 
+    height: 31px; 
+    border: 0; 
+    border-left: 1px solid #d9e5df; 
+    border-right: 1px solid #d9e5df; 
+    text-align: center; 
+    font-size: 12px; 
+    outline: none; 
+} 
+ 
+ 
+/* ========================================================= 
+   BUTTONS 
+========================================================= */ 
+ 
+.product-actions { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 10px; 
+    margin-top: 18px; 
+} 
+ 
+.product-actions button { 
+    height: 42px; 
+    border-radius: 5px; 
+    font-size: 12px; 
+    font-weight: 700; 
+    cursor: pointer; 
+    transition: .2s ease; 
+} 
+ 
+.add-cart-btn { 
+    background: #fff; 
+    border: 1px solid #078b52; 
+    color: #078b52; 
+} 
+ 
+.add-cart-btn:hover { 
+    background: #eaf8f2; 
+} 
+ 
+.buy-now-btn { 
+    background: #078b52; 
+    border: 1px solid #078b52; 
+    color: #fff; 
+} 
+ 
+.buy-now-btn:hover { 
+    background: #067443; 
+} 
+ 
+ 
+/* ========================================================= 
+   RELATED PRODUCTS 
+========================================================= */ 
+ 
+.related-section { 
+    margin-top: 30px; 
+} 
+ 
+.related-heading { 
+    margin-bottom: 13px; 
+} 
+ 
+.related-heading h2 { 
+    margin: 0; 
+    color: #20272c; 
+    font-size: 19px; 
+} 
+ 
+.related-heading p { 
+    margin: 3px 0 0; 
+    color: #7a858a; 
+    font-size: 12px; 
+} 
+ 
+.related-grid { 
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 13px; 
+} 
+ 
+.related-card { 
+    background: #fff; 
+    border: 1px solid #e2e9e6; 
+    border-radius: 9px; 
+    overflow: hidden; 
+    cursor: pointer; 
+    transition: transform .2s ease, box-shadow .2s ease; 
+} 
+ 
+.related-card:hover { 
+    transform: translateY(-3px); 
+    box-shadow: 0 8px 20px rgba(25, 82, 56, 0.10); 
+} 
+ 
+.related-image { 
+    height: 130px; 
+    background: #f4f9f6; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    overflow: hidden; 
+} 
+ 
+.related-info { 
+    padding: 10px; 
+} 
+ 
+.related-category { 
+    color: #078b52; 
+    font-size: 9px; 
+    font-weight: 700; 
+} 
+ 
+.related-info h3 { 
+    margin: 4px 0; 
+    color: #252d31; 
+    font-size: 12px; 
+} 
+ 
+.related-price { 
+    display: flex; 
+    align-items: center; 
+    gap: 6px; 
+    flex-wrap: wrap; 
+} 
+ 
+.related-current { 
+    color: #078b52; 
+    font-size: 13px; 
+    font-weight: 700; 
+} 
+ 
+.related-mrp { 
+    color: #8a9398; 
+    font-size: 9px; 
+    text-decoration: line-through; 
+} 
+ 
+.related-discount { 
+    padding: 2px 4px; 
+    border-radius: 3px; 
+    background: #e7f7ef; 
+    color: #078b52; 
+    font-size: 8px; 
+    font-weight: 700; 
+} 
+ 
+ 
+/* ========================================================= 
+   FOOTER 
+   SAME STYLE AS INDEX 
+========================================================= */ 
+ 
+.site-footer { 
+    background: #0756a6; 
+    color: #fff; 
+    margin-top: 28px; 
+} 
+ 
+.footer-main { 
+    max-width: 1200px; 
+    min-height: 88px; 
+    margin: 0 auto; 
+    padding: 9px 18px; 
+    display: grid; 
+    grid-template-columns: 1.1fr 1.15fr 1.25fr 1.55fr 0.95fr; 
+    align-items: center; 
+} 
+ 
+.footer-block { 
+    min-height: 58px; 
+    padding: 2px 17px; 
+    display: flex; 
+    align-items: center; 
+    gap: 9px; 
+    border-right: 1px solid rgba(255,255,255,0.35); 
+} 
+ 
+.footer-block:first-child { 
+    padding-left: 0; 
+} 
+ 
+.footer-block:last-child { 
+    border-right: 0; 
+} 
+ 
+.footer-icon { 
+    width: 38px; 
+    height: 38px; 
+    flex-shrink: 0; 
+    border-radius: 50%; 
+    border: 1px solid rgba(255,255,255,0.75); 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    font-size: 18px; 
+} 
+ 
+.footer-block h3 { 
+    margin: 0 0 3px; 
+    color: #fff; 
+    font-size: 13px; 
+} 
+ 
+.footer-block p { 
+    margin: 0; 
+    color: #fff; 
+    font-size: 12px; 
+    line-height: 1.35; 
+} 
+ 
+.footer-follow { 
+    display: block; 
+} 
+ 
+.social-icons { 
+    display: flex; 
+    gap: 6px; 
+    margin-top: 5px; 
+} 
+ 
+.social-icons span { 
+    width: 25px; 
+    height: 25px; 
+    border-radius: 50%; 
+    background: rgba(255,255,255,0.12); 
+    border: 1px solid rgba(255,255,255,0.45); 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    font-size: 12px; 
+    font-weight: 700; 
+} 
+ 
+.footer-bottom { 
+    min-height: 31px; 
+    padding: 6px 18px; 
+    border-top: 1px solid rgba(255,255,255,0.3); 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    gap: 22px; 
+} 
+ 
+.footer-bottom p, 
+.footer-bottom-links a { 
+    margin: 0; 
+    color: #eaf3fb; 
+    font-size: 12px; 
+} 
+ 
+.footer-bottom-links { 
+    display: flex; 
+    gap: 15px; 
+} 
+ 
+ 
+/* ========================================================= 
+   RESPONSIVE 
+========================================================= */ 
+ 
+@media (max-width: 900px) { 
+ 
+    .product-details-card { 
+        grid-template-columns: 1fr; 
+    } 
+ 
+    .related-grid { 
+        grid-template-columns: repeat(2, 1fr); 
+    } 
+ 
+    .footer-main { 
+        grid-template-columns: repeat(3, 1fr); 
+        row-gap: 10px; 
+    } 
+ 
+} 
+ 
+@media (max-width: 600px) { 
+ 
+    .product-page { 
+        width: calc(100% - 20px); 
+    } 
+ 
+    .product-actions { 
+        grid-template-columns: 1fr; 
+    } 
+ 
+    .related-grid { 
+        grid-template-columns: 1fr; 
+    } 
+ 
+    .footer-main { 
+        grid-template-columns: 1fr; 
+    } 
+ 
+    .footer-block { 
+        border-right: 0; 
+    } 
+ 
+    .footer-bottom { 
+        flex-direction: column; 
+        gap: 4px; 
+    } 
+ 
+} 
+ 
+ 
+/* ================================ 
+   RELATED / MORE MEDICINES 
+================================ */ 
+ 
+.related-products, 
+.more-medicines { 
+    margin-top: 28px; 
+} 
+ 
+.related-products h2, 
+.more-medicines h2 { 
+    margin-bottom: 6px; 
+} 
+ 
+.related-grid { 
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 16px; 
+} 
+ 
+/* Compact card */ 
+ 
+.related-card, 
+.more-medicine-card { 
+    background: #fff; 
+    border: 1px solid #e1e8e4; 
+    border-radius: 12px; 
+    overflow: hidden; 
+    cursor: pointer; 
+    transition: transform 0.2s ease, box-shadow 0.2s ease; 
+} 
+ 
+.related-card:hover, 
+.more-medicine-card:hover { 
+    transform: translateY(-3px); 
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08); 
+} 
+ 
+/* IMPORTANT: image area smaller */ 
+ 
+.related-card .medicine-image, 
+.more-medicine-card .medicine-image { 
+    height: 165px; 
+    min-height: 165px; 
+    background: #f4f9f6; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    overflow: hidden; 
+    position: relative; 
+} 
+ 
+/* Actual visual */ 
+ 
+.related-card .medicine-visual, 
+.more-medicine-card .medicine-visual { 
+    width: 150px; 
+    height: 130px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    position: relative; 
+} 
+ 
+/* ================================ 
+   TABLETS 
+   ================================ */ 
+ 
+.tablet-strip { 
+    width: 120px; 
+    height: 62px; 
+    background: #eeeeea; 
+    border: 2px solid #d2d2cc; 
+    border-radius: 8px; 
+    padding: 8px; 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 7px; 
+    transform: rotate(-5deg); 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.12); 
+} 
+ 
+/* TABLET CIRCLES MADE BIGGER */ 
+ 
+.tablet-pill { 
+    width: 32px; 
+    height: 22px; 
+    background: #fff; 
+    border: 1px solid #d5d5d5; 
+    border-radius: 50%; 
+    box-shadow: inset 0 -2px 2px rgba(0,0,0,0.08); 
+} 
+ 
+.blue-tablets .tablet-pill { 
+    background: #8fc5ef; 
+    border-color: #6ca9dc; 
+} 
+ 
+ 
+/* ================================ 
+   BOTTLE 
+   ================================ */ 
+ 
+.bottle-visual { 
+    position: relative; 
+} 
+ 
+.bottle-cap { 
+    position: absolute; 
+    top: 7px; 
+    width: 48px; 
+    height: 16px; 
+    background: #168b55; 
+    border-radius: 5px 5px 2px 2px; 
+    z-index: 2; 
+} 
+ 
+.medicine-bottle { 
+    width: 78px; 
+    height: 92px; 
+    background: linear-gradient( 
+        to right, 
+        #ffffff, 
+        #e9f5ed, 
+        #ffffff 
+    ); 
+    border: 2px solid #c9ddd0; 
+    border-radius: 10px 10px 14px 14px; 
+    position: relative; 
+    margin-top: 17px; 
+    box-shadow: 0 5px 10px rgba(0,0,0,0.12); 
+} 
+ 
+.bottle-label { 
+    position: absolute; 
+    left: 7px; 
+    right: 7px; 
+    top: 30px; 
+    padding: 7px 3px; 
+    background: #168b55; 
+    color: white; 
+    font-size: 12px; 
+    font-weight: 700; 
+    text-align: center; 
+    border-radius: 3px; 
+} 
+ 
+.orange-bottle .bottle-cap { 
+    background: #e89127; 
+} 
+ 
+.orange-bottle .medicine-bottle { 
+    background: linear-gradient( 
+        to right, 
+        #fff, 
+        #fff4df, 
+        #fff 
+    ); 
+    border-color: #e5cda7; 
+} 
+ 
+.orange-bottle .bottle-label { 
+    background: #e89127; 
+} 
+ 
+ 
+/* ================================ 
+   CREAM 
+   ================================ */ 
+ 
+.cream-tube { 
+    width: 55px; 
+    height: 105px; 
+    background: linear-gradient( 
+        to right, 
+        #ffffff, 
+        #eef8f1, 
+        #ffffff 
+    ); 
+    border: 2px solid #c9ddd0; 
+    border-radius: 8px 8px 18px 18px; 
+    transform: rotate(-8deg); 
+    position: relative; 
+    box-shadow: 0 5px 10px rgba(0,0,0,0.12); 
+} 
+ 
+.cream-tube::after { 
+    content: ""; 
+    position: absolute; 
+    bottom: -13px; 
+    left: 12px; 
+    width: 28px; 
+    height: 14px; 
+    background: #168b55; 
+    border-radius: 2px 2px 6px 6px; 
+} 
+ 
+.cream-label { 
+    position: absolute; 
+    top: 35px; 
+    left: 5px; 
+    right: 5px; 
+    padding: 7px 2px; 
+    background: #168b55; 
+    color: white; 
+    text-align: center; 
+    font-size: 10px; 
+    font-weight: 700; 
+} 
+ 
+ 
+/* ================================ 
+   SYRUP 
+   ================================ */ 
+ 
+.syrup-visual { 
+    position: relative; 
+} 
+ 
+.syrup-cap { 
+    position: absolute; 
+    top: 8px; 
+    width: 43px; 
+    height: 17px; 
+    background: #168b55; 
+    border-radius: 5px 5px 2px 2px; 
+    z-index: 2; 
+} 
+ 
+.syrup-bottle { 
+    width: 72px; 
+    height: 92px; 
+    margin-top: 18px; 
+    background: linear-gradient( 
+        to right, 
+        #b8783e, 
+        #d99a59, 
+        #a96532 
+    ); 
+    border: 2px solid #8e572e; 
+    border-radius: 10px 10px 18px 18px; 
+    position: relative; 
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15); 
+} 
+ 
+.syrup-label { 
+    position: absolute; 
+    top: 30px; 
+    left: 6px; 
+    right: 6px; 
+    background: #fff; 
+    color: #168b55; 
+    padding: 7px 2px; 
+    text-align: center; 
+    font-size: 9px; 
+    font-weight: 700; 
+    border-radius: 3px; 
+} 
+ 
+ 
+/* Related card text */ 
+ 
+.related-card .medicine-info, 
+.more-medicine-card .medicine-info { 
+    padding: 14px; 
+} 
+ 
+.related-card .medicine-category, 
+.more-medicine-card .medicine-category { 
+    color: #168b55; 
+    font-size: 12px; 
+    font-weight: 700; 
+    margin-bottom: 7px; 
+} 
+ 
+.related-card h3, 
+.more-medicine-card h3 { 
+    font-size: 15px; 
+    margin: 0 0 9px; 
+} 
+ 
+.related-price { 
+    display: flex; 
+    align-items: center; 
+    gap: 7px; 
+    flex-wrap: wrap; 
+} 
+ 
+.related-price .current-price { 
+    color: #169653; 
+    font-size: 16px; 
+    font-weight: 700; 
+} 
+ 
+.related-price .mrp { 
+    color: #888; 
+    font-size: 11px; 
+    text-decoration: line-through; 
+} 
+ 
+.related-price .discount { 
+    background: #e3f6ec; 
+    color: #169653; 
+    font-size: 10px; 
+    font-weight: 700; 
+    padding: 4px 6px; 
+    border-radius: 4px; 
+} 
+ 
+ 
+/* Mobile */ 
+ 
+@media (max-width: 900px) { 
+    .related-grid { 
+        grid-template-columns: repeat(2, 1fr); 
+    } 
+} 
+ 
+@media (max-width: 550px) { 
+    .related-grid { 
+        grid-template-columns: 1fr; 
+    } 
+}

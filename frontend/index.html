@@ -1,0 +1,2691 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>PharmaCare - Online Pharmacy</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+
+        /* =====================================================
+           HOME PAGE
+        ===================================================== */
+
+        .home-page {
+            width: 100%;
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .hero-section {
+
+            position: relative;
+
+            width: calc(100% - 36px);
+            max-width: 1200px;
+
+            min-height: 340px;
+
+            margin: 18px auto 30px;
+
+            padding: 28px 45px;
+
+            border-radius: 12px;
+
+            overflow: hidden;
+
+            display: flex;
+            align-items: center;
+
+          background:
+    linear-gradient(
+        90deg,
+        rgba(248,255,251,0.90) 0%,
+        rgba(248,255,251,0.80) 45%,
+        rgba(248,255,251,0.45) 100%
+    ),
+
+                url("https://images.unsplash.com/photo-1628771065518-0d82f1938462?auto=format&fit=crop&fm=jpg&ixlib=rb-4.1.0&q=80&w=1600");
+
+            background-size: cover;
+
+            background-position: right center;
+
+            border: 1px solid #dcebe4;
+
+            box-shadow:
+                0 8px 24px rgba(26, 74, 54, 0.08);
+        }
+
+
+        .hero-content {
+
+            position: relative;
+
+            z-index: 2;
+
+            width: 55%;
+
+            max-width: 620px;
+        }
+
+
+        .hero-label {
+
+            display: inline-block;
+
+            margin-bottom: 9px;
+
+            color: #078b52;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            letter-spacing: 1px;
+        }
+
+
+        .hero-content h1 {
+
+            margin: 0 0 10px;
+
+            color: #20272c;
+
+            font-size: 35px;
+
+            line-height: 1.15;
+
+            font-weight: 700;
+        }
+
+
+        .hero-content h1 span {
+
+            color: #078b52;
+        }
+
+
+        .hero-content > p {
+
+            max-width: 520px;
+
+            margin: 0 0 17px;
+
+            color: #566268;
+
+            font-size: 13px;
+
+            line-height: 1.6;
+        }
+
+
+        .hero-features {
+
+            display: flex;
+
+            align-items: center;
+
+            flex-wrap: wrap;
+
+            gap: 17px;
+
+            margin-bottom: 19px;
+        }
+
+
+        .hero-feature {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 6px;
+
+            color: #374148;
+
+            font-size: 12px;
+
+            font-weight: 600;
+        }
+
+
+        .hero-feature span {
+
+            width: 21px;
+            height: 21px;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            background: #078b52;
+
+            color: #fff;
+
+            font-size: 11px;
+
+            font-weight: 700;
+        }
+
+
+        .shop-btn {
+
+            border: 0;
+
+            padding: 10px 22px;
+
+            border-radius: 6px;
+
+            background: #078b52;
+
+            color: #fff;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            cursor: pointer;
+        }
+
+
+        .shop-btn:hover {
+
+            background: #067443;
+        }
+
+
+        /* =====================================================
+           SECTION COMMON
+        ===================================================== */
+
+        .home-section {
+
+            width: calc(100% - 36px);
+
+            max-width: 1200px;
+
+            margin: 0 auto 30px;
+        }
+
+
+        .section-heading {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            margin-bottom: 13px;
+        }
+
+
+        .section-heading h2 {
+
+            margin: 0;
+
+            color: #20272c;
+
+            font-size: 19px;
+
+            line-height: 1.2;
+        }
+
+
+        .section-heading p {
+
+            margin: 3px 0 0;
+
+            color: #7a858a;
+
+            font-size: 12px;
+        }
+
+
+        .view-all {
+
+            color: #078b52;
+
+            font-size: 12px;
+
+            font-weight: 700;
+        }
+
+
+        /* =====================================================
+           CATEGORIES
+        ===================================================== */
+
+        .category-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(7, 1fr);
+
+            gap: 11px;
+        }
+
+
+        .category-card {
+
+            min-height: 112px;
+
+            padding: 14px 8px;
+
+            background: #fff;
+
+            border: 1px solid #e2e9e6;
+
+            border-radius: 9px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            cursor: pointer;
+
+            transition:
+                transform .2s ease,
+                box-shadow .2s ease,
+                border-color .2s ease;
+        }
+
+
+        .category-card:hover {
+
+            transform: translateY(-3px);
+
+            border-color: #b8dccb;
+
+            box-shadow:
+                0 7px 18px rgba(25, 82, 56, 0.09);
+        }
+
+
+        .category-icon {
+
+            width: 48px;
+            height: 48px;
+
+            margin-bottom: 8px;
+
+            border-radius: 50%;
+
+            background: #edf9f3;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            color: #078b52;
+
+            font-size: 23px;
+        }
+
+
+        .category-card h3 {
+
+            margin: 0;
+
+            color: #30383d;
+
+            font-size: 12px;
+
+            font-weight: 700;
+        }
+
+
+        /* =====================================================
+           MEDICINE GRID
+        ===================================================== */
+
+        .medicine-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(5, 1fr);
+
+            gap: 13px;
+        }
+
+
+        .medicine-card {
+
+            background: #fff;
+
+            border: 1px solid #e2e9e6;
+
+            border-radius: 9px;
+
+            overflow: hidden;
+
+            cursor: pointer;
+
+            transition:
+                transform .2s ease,
+                box-shadow .2s ease;
+        }
+
+
+        .medicine-card:hover {
+
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 8px 20px rgba(25, 82, 56, 0.10);
+        }
+
+
+        /* =====================================================
+           MEDICINE IMAGE AREA
+           SAME VISUAL STYLE AS MEDICINES.HTML
+        ===================================================== */
+
+        .medicine-image {
+
+            height: 155px;
+
+            background: #f4f9f6;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            overflow: hidden;
+        }
+
+
+        .medicine-visual {
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            position: relative;
+        }
+
+
+        /* =====================================================
+           TABLET STRIP
+        ===================================================== */
+
+        .tablet-visual {
+
+            width: 145px;
+            height: 100px;
+
+            transform: rotate(-6deg);
+        }
+
+
+        .tablet-strip {
+
+            width: 132px;
+            height: 78px;
+
+            padding: 11px;
+
+            border-radius: 10px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #ffffff,
+                    #edf3f1
+                );
+
+            border: 1px solid #cbd8d4;
+
+            box-shadow:
+                0 8px 17px rgba(31, 67, 51, 0.10);
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 8px;
+        }
+
+
+        .tablet-pill {
+
+            border-radius: 50%;
+
+            background:
+                radial-gradient(
+                    circle at 35% 30%,
+                    #ffffff 0%,
+                    #eef3f1 42%,
+                    #cbd8d4 100%
+                );
+
+            border: 1px solid #c4d1cd;
+
+            box-shadow:
+                inset 0 1px 2px rgba(255,255,255,.9);
+        }
+
+
+        .blue-tablets .tablet-pill {
+
+            background:
+                radial-gradient(
+                    circle at 35% 30%,
+                    #e7f8ff 0%,
+                    #a7d9ed 48%,
+                    #69add0 100%
+                );
+
+            border-color: #72b4d4;
+        }
+
+
+        /* =====================================================
+           BOTTLE
+        ===================================================== */
+
+        .bottle-visual {
+
+            width: 125px;
+            height: 135px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: flex-end;
+        }
+
+
+        .bottle-cap {
+
+            width: 75px;
+            height: 22px;
+
+            background: #078b52;
+
+            border-radius:
+                7px 7px 3px 3px;
+
+            position: relative;
+
+            z-index: 2;
+        }
+
+
+        .medicine-bottle {
+
+            width: 108px;
+            height: 103px;
+
+            margin-top: -2px;
+
+            border: 1px solid #bddbcd;
+
+            border-radius:
+                11px 11px 18px 18px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #edfff7,
+                    #ffffff,
+                    #e6f7ee
+                );
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            box-shadow:
+                0 9px 19px rgba(31, 67, 51, 0.10);
+        }
+
+
+        .bottle-label {
+
+            width: 82px;
+            height: 43px;
+
+            background: #078b52;
+
+            border-radius: 5px;
+
+            color: #fff;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            font-size: 11px;
+
+            font-weight: 700;
+        }
+
+
+        /* =====================================================
+           CREAM TUBE
+        ===================================================== */
+
+        .cream-visual {
+
+            width: 110px;
+            height: 140px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        .cream-tube {
+
+            width: 82px;
+            height: 120px;
+
+            border: 1px solid #d3dfdb;
+
+            border-radius:
+                10px 10px 17px 17px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #ffffff,
+                    #edf8f4,
+                    #ffffff
+                );
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            transform: rotate(-7deg);
+
+            position: relative;
+
+            box-shadow:
+                0 9px 20px rgba(31, 67, 51, 0.10);
+        }
+
+
+        .cream-tube::after {
+
+            content: "";
+
+            position: absolute;
+
+            bottom: -11px;
+
+            width: 38px;
+            height: 14px;
+
+            background: #c7d2ce;
+
+            border-radius:
+                0 0 6px 6px;
+        }
+
+
+        .cream-label {
+
+            width: 68px;
+            height: 45px;
+
+            background: #078b52;
+
+            border-radius: 5px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            color: #fff;
+
+            font-size: 10px;
+
+            font-weight: 700;
+        }
+
+
+        /* =====================================================
+           ORANGE BOTTLE
+        ===================================================== */
+
+        .orange-bottle .medicine-bottle {
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #fff3df,
+                    #ffffff,
+                    #ffe5c1
+                );
+
+            border-color: #e7c18d;
+        }
+
+
+        .orange-bottle .bottle-label {
+
+            background: #e58b27;
+        }
+
+
+        .orange-bottle .bottle-cap {
+
+            background: #e58b27;
+        }
+
+
+        /* =====================================================
+           MEDICINE INFO
+        ===================================================== */
+
+        .medicine-info {
+
+            padding: 11px;
+        }
+
+
+        .medicine-category {
+
+            display: inline-block;
+
+            margin-bottom: 5px;
+
+            color: #078b52;
+
+            font-size: 10px;
+
+            font-weight: 700;
+        }
+
+
+        .medicine-info h3 {
+
+            margin: 0 0 5px;
+
+            color: #252d31;
+
+            font-size: 13px;
+
+            line-height: 1.3;
+        }
+
+
+        .medicine-info > p {
+
+            min-height: 38px;
+
+            margin: 0;
+
+            color: #737e83;
+
+            font-size: 11px;
+
+            line-height: 1.45;
+        }
+
+
+        .medicine-rating {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 5px;
+
+            margin-top: 6px;
+
+            font-size: 12px;
+        }
+
+
+        .medicine-rating strong {
+
+            color: #f39b20;
+
+            font-size: 12px;
+        }
+
+
+        .medicine-rating span {
+
+            color: #68747a;
+
+            font-size: 11px;
+        }
+
+
+        .medicine-bottom {
+
+            margin-top: 9px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 7px;
+        }
+
+
+        .medicine-price-box {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 5px;
+
+            flex-wrap: wrap;
+        }
+
+
+        .medicine-current-price {
+
+            color: #078b52;
+
+            font-size: 15px;
+
+            font-weight: 700;
+        }
+
+
+        .medicine-mrp {
+
+            color: #8a9398;
+
+            font-size: 10px;
+
+            text-decoration: line-through;
+        }
+
+
+        .discount-badge {
+
+            padding: 2px 5px;
+
+            border-radius: 4px;
+
+            background: #e7f7ef;
+
+            color: #078b52;
+
+            font-size: 9px;
+
+            font-weight: 700;
+        }
+
+
+        .medicine-btn {
+
+            border: 0;
+
+            padding: 6px 8px;
+
+            border-radius: 5px;
+
+            background: #078b52;
+
+            color: #fff;
+
+            font-size: 10px;
+
+            font-weight: 700;
+
+            cursor: pointer;
+        }
+
+
+        .medicine-btn:hover {
+
+            background: #067443;
+        }
+
+
+        /* =====================================================
+           OFFERS
+        ===================================================== */
+
+        .offers-section {
+
+            padding: 19px;
+
+            border-radius: 10px;
+
+            background: #f3f9f6;
+
+            border: 1px solid #dfece5;
+        }
+
+
+        .offer-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 12px;
+        }
+
+
+        .offer-card {
+
+            min-height: 105px;
+
+            padding: 15px;
+
+            border-radius: 8px;
+
+            background: #fff;
+
+            border: 1px solid #e0e9e5;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+        }
+
+
+        .offer-icon {
+
+            width: 48px;
+            height: 48px;
+
+            flex-shrink: 0;
+
+            border-radius: 50%;
+
+            background: #e9f7f0;
+
+            color: #078b52;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            font-size: 22px;
+        }
+
+
+        .offer-card h3 {
+
+            margin: 0 0 3px;
+
+            color: #252d31;
+
+            font-size: 13px;
+        }
+
+
+        .offer-card p {
+
+            margin: 0;
+
+            color: #737e83;
+
+            font-size: 11px;
+        }
+
+
+        .offer-code {
+
+            display: inline-block;
+
+            margin-top: 5px;
+
+            padding: 2px 6px;
+
+            background: #e7f7ef;
+
+            color: #078b52;
+
+            border-radius: 3px;
+
+            font-size: 9px;
+
+            font-weight: 700;
+        }
+
+
+        /* =====================================================
+           HEALTH TIPS
+        ===================================================== */
+
+        .health-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 13px;
+        }
+
+
+        .health-card {
+
+            min-height: 125px;
+
+            padding: 16px;
+
+            background: #fff;
+
+            border: 1px solid #e2e9e6;
+
+            border-radius: 9px;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 14px;
+        }
+
+
+        .health-icon {
+
+            width: 54px;
+            height: 54px;
+
+            flex-shrink: 0;
+
+            border-radius: 50%;
+
+            background: #edf9f3;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            font-size: 27px;
+        }
+
+
+        .health-card h3 {
+
+            margin: 0 0 5px;
+
+            color: #252d31;
+
+            font-size: 13px;
+        }
+
+
+        .health-card p {
+
+            margin: 0;
+
+            color: #737e83;
+
+            font-size: 11px;
+
+            line-height: 1.5;
+        }
+
+
+        /* =====================================================
+           ABOUT
+        ===================================================== */
+
+        .about-box {
+
+            padding: 19px;
+
+            border-radius: 10px;
+
+            background: #f5faf7;
+
+            border: 1px solid #dfece5;
+        }
+
+
+        .about-box h2 {
+
+            margin: 0 0 7px;
+
+            color: #20272c;
+
+            font-size: 18px;
+        }
+
+
+        .about-box p {
+
+            max-width: 900px;
+
+            margin: 0;
+
+            color: #667177;
+
+            font-size: 12px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        .site-footer {
+
+            background: #0756a6;
+
+            color: #fff;
+
+            margin-top: 28px;
+        }
+
+
+        .footer-main {
+
+            max-width: 1200px;
+
+            min-height: 88px;
+
+            margin: 0 auto;
+
+            padding: 9px 18px;
+
+            display: grid;
+
+            grid-template-columns:
+                1.1fr
+                1.15fr
+                1.25fr
+                1.55fr
+                0.95fr;
+
+            align-items: center;
+        }
+
+
+        .footer-block {
+
+            min-height: 58px;
+
+            padding: 2px 17px;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 9px;
+
+            border-right:
+                1px solid rgba(255,255,255,0.35);
+        }
+
+
+        .footer-block:first-child {
+
+            padding-left: 0;
+        }
+
+
+        .footer-block:last-child {
+
+            border-right: 0;
+        }
+
+
+        .footer-icon {
+
+            width: 38px;
+            height: 38px;
+
+            flex-shrink: 0;
+
+            border-radius: 50%;
+
+            border:
+                1px solid rgba(255,255,255,0.75);
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            font-size: 18px;
+        }
+
+
+        .footer-block h3 {
+
+            margin: 0 0 3px;
+
+            color: #fff;
+
+            font-size: 13px;
+        }
+
+
+        .footer-block p {
+
+            margin: 0;
+
+            color: #fff;
+
+            font-size: 12px;
+
+            line-height: 1.35;
+        }
+
+
+        .footer-follow {
+
+            display: block;
+        }
+
+
+        .social-icons {
+
+            display: flex;
+
+            gap: 6px;
+
+            margin-top: 5px;
+        }
+
+
+        .social-icons span {
+
+            width: 25px;
+            height: 25px;
+
+            border-radius: 50%;
+
+            background:
+                rgba(255,255,255,0.12);
+
+            border:
+                1px solid rgba(255,255,255,0.45);
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            font-size: 12px;
+
+            font-weight: 700;
+        }
+
+
+        .footer-bottom {
+
+            min-height: 31px;
+
+            padding: 6px 18px;
+
+            border-top:
+                1px solid rgba(255,255,255,0.3);
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 22px;
+        }
+
+
+        .footer-bottom p,
+        .footer-bottom-links a {
+
+            margin: 0;
+
+            color: #eaf3fb;
+
+            font-size: 12px;
+        }
+
+
+        .footer-bottom-links {
+
+            display: flex;
+
+            gap: 15px;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 1100px) {
+
+            .medicine-grid {
+
+                grid-template-columns:
+                    repeat(3, 1fr);
+            }
+
+            .category-grid {
+
+                grid-template-columns:
+                    repeat(4, 1fr);
+            }
+
+            .footer-main {
+
+                grid-template-columns:
+                    repeat(3, 1fr);
+
+                row-gap: 10px;
+            }
+
+            .footer-block:nth-child(3) {
+
+                border-right: 0;
+            }
+        }
+
+
+        @media (max-width: 800px) {
+
+            .hero-section {
+
+                padding: 28px;
+
+            }
+
+            .hero-content {
+
+                width: 70%;
+            }
+
+            .medicine-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .category-grid {
+
+                grid-template-columns:
+                    repeat(3, 1fr);
+            }
+
+            .offer-grid,
+            .health-grid {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+            .footer-main {
+
+                grid-template-columns:
+                    1fr 1fr;
+            }
+
+            .footer-block {
+
+                border-right: 0;
+            }
+        }
+
+
+        @media (max-width: 550px) {
+
+            .hero-section {
+
+                width: calc(100% - 20px);
+
+                min-height: 330px;
+
+                padding: 25px 20px;
+
+                background-position:
+                    70% center;
+            }
+
+            .hero-content {
+
+                width: 100%;
+            }
+
+            .hero-content h1 {
+
+                font-size: 28px;
+            }
+
+            .home-section {
+
+                width: calc(100% - 20px);
+            }
+
+            .category-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .medicine-grid {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+            .footer-main {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+            .footer-bottom {
+
+                flex-direction: column;
+
+                gap: 4px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header>
+
+    <div class="top-header">
+
+        <div class="logo-area">
+
+            <div class="logo-icon">
+                +
+            </div>
+
+            <div class="logo-text">
+
+                <h2>
+                    PharmaCare
+                </h2>
+
+                <p>
+                    Your Trusted Online Pharmacy
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="header-search">
+
+            <input
+                type="text"
+                id="homeSearch"
+                placeholder="Search medicines, health products..."
+            >
+
+            <button
+                type="button"
+                id="searchButton"
+            >
+                Search
+            </button>
+
+        </div>
+
+
+        <div class="header-actions">
+
+            <a
+                href="pages/track-order.html"
+                class="action-icon"
+            >
+
+                <span>
+                    🚚
+                </span>
+
+                <small>
+                    Track Order
+                </small>
+
+            </a>
+
+
+            <a
+                href="#offers"
+                class="action-icon"
+            >
+
+                <span>
+                    🏷️
+                </span>
+
+                <small>
+                    Offers
+                </small>
+
+            </a>
+
+
+            <a
+                href="pages/cart.html"
+                class="action-icon cart-icon"
+            >
+
+                <span>
+                    🛒
+                </span>
+
+                <small>
+                    Cart
+                </small>
+
+                <b id="cartCount">
+                    0
+                </b>
+
+            </a>
+
+
+            <a
+                href="pages/profile.html"
+                class="action-icon"
+            >
+
+                <span>
+                    👤
+                </span>
+
+                <small>
+                    Profile
+                </small>
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
+    <nav class="main-nav">
+
+        <a
+            href="index.html"
+            class="active"
+        >
+            Home
+        </a>
+
+        <a href="pages/medicines.html">
+            Medicines
+        </a>
+
+        <a href="pages/medicines.html#categories">
+            Categories
+        </a>
+
+        <a href="#offers">
+            Offers
+        </a>
+
+        <a href="#health-tips">
+            Health Tips
+        </a>
+
+        <a href="#about">
+            About Us
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =========================================================
+     MAIN
+========================================================= -->
+
+<main>
+
+<div class="home-page">
+
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <section class="hero-section">
+
+        <div class="hero-content">
+
+            <div class="hero-label">
+                YOUR HEALTH, OUR PRIORITY
+            </div>
+
+            <h1>
+                Your Health,
+                <span>
+                    Our Priority ♥
+                </span>
+            </h1>
+
+            <p>
+                Order medicines online &amp; get them delivered
+                at your doorstep - Safe, Fast &amp; Reliable.
+            </p>
+
+
+            <div class="hero-features">
+
+                <div class="hero-feature">
+
+                    <span>✓</span>
+
+                    100% Genuine
+
+                </div>
+
+
+                <div class="hero-feature">
+
+                    <span>✓</span>
+
+                    Fast Delivery
+
+                </div>
+
+
+                <div class="hero-feature">
+
+                    <span>✓</span>
+
+                    Secure Payment
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="shop-btn"
+                onclick="window.location.href='pages/medicines.html'"
+            >
+                Shop Now
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CATEGORIES
+    ====================================================== -->
+
+    <section
+        class="home-section"
+        id="categories"
+    >
+
+        <div class="section-heading">
+
+            <div>
+
+                <h2>
+                    Shop by Category
+                </h2>
+
+                <p>
+                    Find healthcare products easily
+                </p>
+
+            </div>
+
+            <a
+                href="pages/medicines.html"
+                class="view-all"
+            >
+                View All →
+            </a>
+
+        </div>
+
+
+        <div class="category-grid">
+
+
+            <div
+                class="category-card"
+                onclick="window.location.href='pages/medicines.html?category=pain'"
+            >
+
+                <div class="category-icon">
+                    💊
+                </div>
+
+                <h3>
+                    Pain Relief
+                </h3>
+
+            </div>
+
+
+            <div
+                class="category-card"
+                onclick="window.location.href='pages/medicines.html?category=cold'"
+            >
+
+                <div class="category-icon">
+                    🩺
+                </div>
+
+                <h3>
+                    Cold &amp; Flu
+                </h3>
+
+            </div>
+
+
+            <div
+                class="category-card"
+                onclick="window.location.href='pages/medicines.html?category=vitamins'"
+            >
+
+                <div class="category-icon">
+                    💊
+                </div>
+
+                <h3>
+                    Vitamins
+                </h3>
+
+            </div>
+
+
+            <div
+                class="category-card"
+                onclick="window.location.href='pages/medicines.html?category=digestive'"
+            >
+
+                <div class="category-icon">
+                    🧴
+                </div>
+
+                <h3>
+                    Digestive
+                </h3>
+
+            </div>
+
+
+            <div
+                class="category-card"
+                onclick="window.location.href='pages/medicines.html?category=skin'"
+            >
+
+                <div class="category-icon">
+                    🧴
+                </div>
+
+                <h3>
+                    Skin Care
+                </h3>
+
+            </div>
+
+
+            <div
+                class="category-card"
+                onclick="window.location.href='pages/medicines.html'"
+            >
+
+                <div class="category-icon">
+                    🩹
+                </div>
+
+                <h3>
+                    First Aid
+                </h3>
+
+            </div>
+
+
+            <div
+                class="category-card"
+                onclick="window.location.href='pages/medicines.html'"
+            >
+
+                <div class="category-icon">
+                    🧴
+                </div>
+
+                <h3>
+                    Personal Care
+                </h3>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         POPULAR MEDICINES
+    ====================================================== -->
+
+    <section class="home-section">
+
+        <div class="section-heading">
+
+            <div>
+
+                <h2>
+                    Popular Medicines
+                </h2>
+
+                <p>
+                    Frequently ordered healthcare products
+                </p>
+
+            </div>
+
+            <a
+                href="pages/medicines.html"
+                class="view-all"
+            >
+                View All →
+            </a>
+
+        </div>
+
+
+        <div class="medicine-grid">
+
+
+            <!-- =================================================
+                 MED001 - PARACETAMOL
+            ================================================== -->
+
+            <article
+                class="medicine-card"
+                data-id="med001"
+                onclick="window.location.href='pages/product-details.html?id=med001'"
+            >
+
+                <div class="medicine-image">
+
+                    <div class="medicine-visual tablet-visual">
+
+                        <div class="tablet-strip">
+
+                            <div class="tablet-pill"></div>
+                            <div class="tablet-pill"></div>
+                            <div class="tablet-pill"></div>
+                            <div class="tablet-pill"></div>
+                            <div class="tablet-pill"></div>
+                            <div class="tablet-pill"></div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="medicine-info">
+
+                    <span class="medicine-category">
+                        Pain Relief
+                    </span>
+
+                    <h3>
+                        Paracetamol 500mg
+                    </h3>
+
+                    <p>
+                        Used for temporary relief from fever and mild pain.
+                    </p>
+
+
+                    <div class="medicine-rating">
+
+                        <strong>
+                            ★ 4.5
+                        </strong>
+
+                        <span>
+                            120 Reviews
+                        </span>
+
+                    </div>
+
+
+                    <div class="medicine-bottom">
+
+                        <div class="medicine-price-box">
+
+                            <strong class="medicine-current-price">
+                                ₹22.50
+                            </strong>
+
+                            <span class="medicine-mrp">
+                                ₹25
+                            </span>
+
+                            <span class="discount-badge">
+                                10% OFF
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 MED002 - VITAMIN C
+            ================================================== -->
+
+            <article
+                class="medicine-card"
+                data-id="med002"
+                onclick="window.location.href='pages/product-details.html?id=med002'"
+            >
+
+                <div class="medicine-image">
+
+                    <div class="medicine-visual bottle-visual">
+
+                        <div class="bottle-cap"></div>
+
+                        <div class="medicine-bottle">
+
+                            <div class="bottle-label">
+                                VIT C
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="medicine-info">
+
+                    <span class="medicine-category">
+                        Vitamins
+                    </span>
+
+                    <h3>
+                        Vitamin C Tablets
+                    </h3>
+
+                    <p>
+                        Vitamin supplement for daily nutritional support.
+                    </p>
+
+
+                    <div class="medicine-rating">
+
+                        <strong>
+                            ★ 4.6
+                        </strong>
+
+                        <span>
+                            98 Reviews
+                        </span>
+
+                    </div>
+
+
+                    <div class="medicine-bottom">
+
+                        <div class="medicine-price-box">
+
+                            <strong class="medicine-current-price">
+                                ₹102
+                            </strong>
+
+                            <span class="medicine-mrp">
+                                ₹120
+                            </span>
+
+                            <span class="discount-badge">
+                                15% OFF
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 MED003 - CETIRIZINE
+            ================================================== -->
+
+            <article
+                class="medicine-card"
+                data-id="med003"
+                onclick="window.location.href='pages/product-details.html?id=med003'"
+            >
+
+                <div class="medicine-image">
+
+                    <div class="medicine-visual tablet-visual blue-tablets">
+
+                        <div class="tablet-strip">
+
+                            <div class="tablet-pill"></div>
+                            <div class="tablet-pill"></div>
+                            <div class="tablet-pill"></div>
+                            <div class="tablet-pill"></div>
+                            <div class="tablet-pill"></div>
+                            <div class="tablet-pill"></div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="medicine-info">
+
+                    <span class="medicine-category">
+                        Cold &amp; Flu
+                    </span>
+
+                    <h3>
+                        Cetirizine 10mg
+                    </h3>
+
+                    <p>
+                        Commonly used for allergy-related symptoms.
+                    </p>
+
+
+                    <div class="medicine-rating">
+
+                        <strong>
+                            ★ 4.4
+                        </strong>
+
+                        <span>
+                            86 Reviews
+                        </span>
+
+                    </div>
+
+
+                    <div class="medicine-bottom">
+
+                        <div class="medicine-price-box">
+
+                            <strong class="medicine-current-price">
+                                ₹42.75
+                            </strong>
+
+                            <span class="medicine-mrp">
+                                ₹45
+                            </span>
+
+                            <span class="discount-badge">
+                                5% OFF
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 MED004 - ANTISEPTIC CREAM
+            ================================================== -->
+
+            <article
+                class="medicine-card"
+                data-id="med004"
+                onclick="window.location.href='pages/product-details.html?id=med004'"
+            >
+
+                <div class="medicine-image">
+
+                    <div class="medicine-visual cream-visual">
+
+                        <div class="cream-tube">
+
+                            <div class="cream-label">
+                                CARE
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="medicine-info">
+
+                    <span class="medicine-category">
+                        Skin Care
+                    </span>
+
+                    <h3>
+                        Antiseptic Cream
+                    </h3>
+
+                    <p>
+                        Cream for basic skin protection and care.
+                    </p>
+
+
+                    <div class="medicine-rating">
+
+                        <strong>
+                            ★ 4.3
+                        </strong>
+
+                        <span>
+                            74 Reviews
+                        </span>
+
+                    </div>
+
+
+                    <div class="medicine-bottom">
+
+                        <div class="medicine-price-box">
+
+                            <strong class="medicine-current-price">
+                                ₹74.80
+                            </strong>
+
+                            <span class="medicine-mrp">
+                                ₹85
+                            </span>
+
+                            <span class="discount-badge">
+                                12% OFF
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 MED005 - DIGESTIVE
+            ================================================== -->
+
+            <article
+                class="medicine-card"
+                data-id="med005"
+                onclick="window.location.href='pages/product-details.html?id=med005'"
+            >
+
+                <div class="medicine-image">
+
+                    <div class="medicine-visual bottle-visual orange-bottle">
+
+                        <div class="bottle-cap"></div>
+
+                        <div class="medicine-bottle">
+
+                            <div class="bottle-label">
+                                DIGEST
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="medicine-info">
+
+                    <span class="medicine-category">
+                        Digestive
+                    </span>
+
+                    <h3>
+                        Digestive Tablets
+                    </h3>
+
+                    <p>
+                        Digestive support tablets for everyday use.
+                    </p>
+
+
+                    <div class="medicine-rating">
+
+                        <strong>
+                            ★ 4.2
+                        </strong>
+
+                        <span>
+                            61 Reviews
+                        </span>
+
+                    </div>
+
+
+                    <div class="medicine-bottom">
+
+                        <div class="medicine-price-box">
+
+                            <strong class="medicine-current-price">
+                                ₹59.80
+                            </strong>
+
+                            <span class="medicine-mrp">
+                                ₹65
+                            </span>
+
+                            <span class="discount-badge">
+                                8% OFF
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         OFFERS
+    ====================================================== -->
+
+    <section
+        class="home-section offers-section"
+        id="offers"
+    >
+
+        <div class="section-heading">
+
+            <div>
+
+                <h2>
+                    Special Offers
+                </h2>
+
+                <p>
+                    Save more on selected medicines
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="offer-grid">
+
+
+            <div class="offer-card">
+
+                <div class="offer-icon">
+                    💊
+                </div>
+
+                <div>
+
+                    <h3>
+                        10% OFF on Paracetamol
+                    </h3>
+
+                    <p>
+                        Get special savings on selected pain relief medicines.
+                    </p>
+
+                    <span class="offer-code">
+                        10% OFF
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="offer-card">
+
+                <div class="offer-icon">
+                    🍊
+                </div>
+
+                <div>
+
+                    <h3>
+                        15% OFF on Vitamin C
+                    </h3>
+
+                    <p>
+                        Save on selected vitamin supplements.
+                    </p>
+
+                    <span class="offer-code">
+                        15% OFF
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="offer-card">
+
+                <div class="offer-icon">
+                    🚚
+                </div>
+
+                <div>
+
+                    <h3>
+                        Free Delivery Above ₹499
+                    </h3>
+
+                    <p>
+                        Enjoy convenient delivery on eligible orders.
+                    </p>
+
+                    <span class="offer-code">
+                        FREE DELIVERY
+                    </span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         HEALTH TIPS
+    ====================================================== -->
+
+    <section
+        class="home-section"
+        id="health-tips"
+    >
+
+        <div class="section-heading">
+
+            <div>
+
+                <h2>
+                    Health Tips
+                </h2>
+
+                <p>
+                    Simple habits for a healthier lifestyle
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="health-grid">
+
+
+            <div class="health-card">
+
+                <div class="health-icon">
+                    💧
+                </div>
+
+                <div>
+
+                    <h3>
+                        Drink Enough Water
+                    </h3>
+
+                    <p>
+                        Keep yourself hydrated throughout the day
+                        by drinking enough water.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="health-card">
+
+                <div class="health-icon">
+                    🥗
+                </div>
+
+                <div>
+
+                    <h3>
+                        Eat Healthy
+                    </h3>
+
+                    <p>
+                        Include a variety of fruits, vegetables
+                        and nutritious foods in your meals.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="health-card">
+
+                <div class="health-icon">
+                    😴
+                </div>
+
+                <div>
+
+                    <h3>
+                        Sleep Well
+                    </h3>
+
+                    <p>
+                        Maintain a regular sleep routine and
+                        give your body enough rest.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         ABOUT
+    ====================================================== -->
+
+    <section
+        class="home-section"
+        id="about"
+    >
+
+        <div class="about-box">
+
+            <h2>
+                About PharmaCare
+            </h2>
+
+            <p>
+                PharmaCare is an online pharmacy platform designed
+                to make ordering medicines and healthcare products
+                simple and convenient. Browse products, check
+                medicine details, add items to your cart and place
+                orders through an easy-to-use interface.
+            </p>
+
+        </div>
+
+    </section>
+
+
+</div>
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="site-footer">
+
+    <div class="footer-main">
+
+
+        <div class="footer-block">
+
+            <div class="footer-icon">
+                🎧
+            </div>
+
+            <div>
+
+                <h3>
+                    Need Help?
+                </h3>
+
+                <p>
+                    We are here to help you
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-block">
+
+            <div class="footer-icon">
+                📞
+            </div>
+
+            <div>
+
+                <h3>
+                    Customer Care
+                </h3>
+
+                <p>
+                    +91 98765 43210
+                </p>
+
+                <p>
+                    Mon - Sat: 9:00 AM to 7:00 PM
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-block">
+
+            <div class="footer-icon">
+                ✉
+            </div>
+
+            <div>
+
+                <h3>
+                    Email Us
+                </h3>
+
+                <p>
+                    support@pharmacare.com
+                </p>
+
+                <p>
+                    We reply within 24 hours
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-block">
+
+            <div class="footer-icon">
+                📍
+            </div>
+
+            <div>
+
+                <h3>
+                    Address
+                </h3>
+
+                <p>
+                    At. Post Sangamner, Dist. Ahmednagar,
+                    Maharashtra - 422605
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-block footer-follow">
+
+            <h3>
+                Follow Us
+            </h3>
+
+            <p>
+                Connect with us
+            </p>
+
+            <div class="social-icons">
+
+                <span>
+                    f
+                </span>
+
+                <span>
+                    ◎
+                </span>
+
+                <span>
+                    ☎
+                </span>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2025 PharmaCare. All Rights Reserved.
+        </p>
+
+        <div class="footer-bottom-links">
+
+            <a href="#">
+                Privacy Policy
+            </a>
+
+            <a href="#">
+                Terms &amp; Conditions
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<script src="js/main.js"></script>
+<script src="js/home.js"></script>
+
+</body>
+
+</html>
